@@ -235,7 +235,8 @@ const Header = () => {
             <li><Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link></li>
             {/* Mobile Services with Dropdown - Corrected Structure */}
             <li className="relative group cursor-pointer">
-              <div
+              <Link
+                href={'/services'}
                 className={`flex justify-between items-center pb-1 ${
                   isDropdownOpen ? 'text-gn font-semibold' : ''
                 }`}
@@ -243,7 +244,7 @@ const Header = () => {
               >
                 <span className="transition-colors duration-300">Services</span>
                 <FaChevronDown size={12} className="ml-1 mt-[2px]" />
-              </div>
+              </Link>
 
               {isDropdownOpen && (
                 <ul className=" mt-2 bg-gray-50 py-2 w-full"> {/* Adjusted for mobile */}
