@@ -2,7 +2,7 @@ import { FaChevronRight, FaWhatsapp } from 'react-icons/fa';
 
 export const heroSlidesContent = [
   {
-    src: '/homepage/Hero1.jpg',
+    src: '/home/Hero1.jpg',
     heading: 'Your One-Stop Destination for All Government Services.',
     subheading: 'From visa applications to labor contracts, get all your government services handled hassle-free.',
     buttons: [
@@ -18,7 +18,7 @@ export const heroSlidesContent = [
     ],
   },
   {
-    src: '/homepage/Hero2.jpg',
+    src: '/home/Hero2.jpg',
     heading: 'Everything Explained. Everything Done Right.',
     subheading: 'We walk you through every process, ensuring your forms and documents are handled with precision and care.',
     buttons: [
@@ -35,7 +35,7 @@ export const heroSlidesContent = [
     ],
   },
   {
-    src: '/homepage/Hero3.jpg',
+    src: '/home/Hero3.jpg',
     heading: 'Official Dubai & UAE Services, Delivered with Pride.',
     subheading: 'We handle the paperwork — you focus on your future. Trusted for visas, labor, Emirates ID & more.',
     buttons: [
