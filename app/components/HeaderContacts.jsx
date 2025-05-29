@@ -1,4 +1,4 @@
-import contactInfo from '../data/contacts';
+import {contactInfo} from '../data/contacts';
 
 const HeaderContacts = () => {
   return (

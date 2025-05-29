@@ -1,3 +1,10 @@
+export const heroContent = {
+  title: "Insights, Updates & Guides",
+  subtitle: "Stay informed with the latest updates on visas, government processes, business setup, and more.",
+  image: "/blogs/hero.jpg",
+};
+
+
 export const blogs = [
   {
     "id": "1",
@@ -6,7 +13,7 @@ export const blogs = [
     "category": "Visas & Immigration",
     "date": "2023-04-15",
     "author": "Aisha Al-Falah",
-    "imageUrl": "/homepage/Hero1.jpg",
+    "imageUrl": "/blogs/1.jpg",
     "imageAlt": "Passport and visa documents",
     "excerpt": "Navigating the various visa categories in the UAE can be complex. This guide simplifies everything you need to know about tourist, residence, and employment visas.",
     "content": [
@@ -62,7 +69,7 @@ export const blogs = [
     "category": "Travel & Tourism",
     "date": "2023-05-01",
     "author": "Omar Khalid",
-    "imageUrl": "/homepage/Hero2.jpg",
+    "imageUrl": "/blogs/2.jpg",
     "imageAlt": "Traditional souk in Dubai",
     "excerpt": "Discover the lesser-known attractions and cultural experiences that make Dubai truly unique, far from the bustling city center.",
     "content": [
@@ -118,7 +125,7 @@ export const blogs = [
     "category": "Investment",
     "date": "2023-05-10",
     "author": "Fatima Zahra",
-    "imageUrl": "/homepage/Hero3.jpg",
+    "imageUrl": "/blogs/3.jpg",
     "imageAlt": "Dubai skyline with modern buildings",
     "excerpt": "A detailed look at the current real estate market in Dubai, highlighting key investment opportunities and the regulatory framework for foreign investors.",
     "content": [
@@ -174,7 +181,7 @@ export const blogs = [
     "category": "Business & Economy",
     "date": "2023-05-18",
     "author": "Ahmed bin Saeed",
-    "imageUrl": "/homepage/Hero1.jpg",
+    "imageUrl": "/blogs/4.jpg",
     "imageAlt": "Business meeting in a modern office",
     "excerpt": "A detailed comparison of establishing a business in Dubai's free zones versus the mainland, outlining benefits, requirements, and key considerations.",
     "content": [
@@ -230,7 +237,7 @@ export const blogs = [
     "category": "Visas & Immigration",
     "date": "2023-05-25",
     "author": "Layla Mansour",
-    "imageUrl": "/homepage/Hero2.jpg",
+    "imageUrl": "/blogs/5.jpg",
     "imageAlt": "Golden visa document and UAE flag",
     "excerpt": "Explore the comprehensive benefits of the UAE Golden Visa program, including long-term residency and its eligibility criteria for various professionals and investors.",
     "content": [
@@ -286,7 +293,7 @@ export const blogs = [
     "category": "Travel & Tourism",
     "date": "2023-06-01",
     "author": "Youssef Al-Hajri",
-    "imageUrl": "/homepage/Hero3.jpg",
+    "imageUrl": "/blogs/6.jpg",
     "imageAlt": "Sheikh Zayed Grand Mosque in Abu Dhabi",
     "excerpt": "Discover the majestic landmarks and rich cultural experiences that define Abu Dhabi, from architectural marvels to vibrant local traditions.",
     "content": [
@@ -342,7 +349,7 @@ export const blogs = [
     "category": "Visas & Immigration",
     "date": "2023-06-08",
     "author": "Noura Al-Hajri",
-    "imageUrl": "/homepage/Hero1.jpg",
+    "imageUrl": "/blogs/7.jpg",
     "imageAlt": "Happy family in UAE",
     "excerpt": "A comprehensive guide to sponsoring family members for a residence visa in the UAE, detailing eligibility, documentation, and the application process.",
     "content": [
@@ -398,7 +405,7 @@ export const blogs = [
     "category": "Living in UAE",
     "date": "2023-06-15",
     "author": "Dr. Amir Rashid",
-    "imageUrl": "/homepage/Hero2.jpg",
+    "imageUrl": "/blogs/8.jpg",
     "imageAlt": "Modern hospital interior in UAE",
     "excerpt": "An overview of the healthcare system in the UAE, covering public and private services, health insurance requirements, and access to medical facilities.",
     "content": [
@@ -454,7 +461,7 @@ export const blogs = [
     "category": "Living in UAE",
     "date": "2023-06-22",
     "author": "Sarah Khan",
-    "imageUrl": "/homepage/Hero3.jpg",
+    "imageUrl": "/blogs/9.jpg",
     "imageAlt": "Students in a modern classroom",
     "excerpt": "A guide to the diverse education system in the UAE, from international schools offering various curricula to prestigious higher education institutions.",
     "content": [
@@ -510,7 +517,7 @@ export const blogs = [
     "category": "Living in UAE",
     "date": "2023-06-29",
     "author": "Faisal Al-Zaabi",
-    "imageUrl": "/homepage/Hero1.jpg",
+    "imageUrl": "/blogs/10.jpg",
     "imageAlt": "Car driving on a UAE highway",
     "excerpt": "A comprehensive guide to obtaining a driving license in the UAE, understanding local traffic laws, and key regulations for safe driving.",
     "content": [
@@ -566,7 +573,7 @@ export const blogs = [
     "category": "Travel & Tourism",
     "date": "2023-07-06",
     "author": "Abdullah Al-Jaziri",
-    "imageUrl": "/homepage/Hero11.jpg",
+    "imageUrl": "/blogs/11.jpg",
     "imageAlt": "Jebel Jais mountain range",
     "excerpt": "Explore the adventure capital of the UAE, Ras Al Khaimah, known for its rugged mountains, thrilling outdoor activities, and serene natural beauty.",
     "content": [
@@ -622,7 +629,7 @@ export const blogs = [
     "category": "Business & Economy",
     "date": "2023-07-13",
     "author": "Dr. Sana Al-Dhaheri",
-    "imageUrl": "/homepage/Hero12.jpg",
+    "imageUrl": "/blogs/12.jpg",
     "imageAlt": "Futuristic city with data lines",
     "excerpt": "An in-depth look at the UAE's burgeoning innovation and technology ecosystem, highlighting key hubs, government initiatives, and opportunities for tech startups.",
     "content": [
@@ -678,7 +685,7 @@ export const blogs = [
     "category": "Living in UAE",
     "date": "2023-07-20",
     "author": "Mariam Al-Mansoori",
-    "imageUrl": "/homepage/Hero13.jpg",
+    "imageUrl": "/blogs/13.jpg",
     "imageAlt": "Traditional Emirati greeting",
     "excerpt": "A guide to understanding and respecting the rich cultural traditions and etiquette in the UAE, essential for residents and visitors alike.",
     "content": [

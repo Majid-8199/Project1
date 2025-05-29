@@ -1,33 +1,59 @@
-'use client'
+'use client';
 
+import React, { useEffect } from 'react';
 import Image from 'next/image';
+import { applyOnlineContent } from '../../data/applyonline';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ApplyOnlineForm = () => {
+  const { heading, description, label, image, formUrl } = applyOnlineContent;
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
 
   return (
-    <section className='flex items-center justify-center h-[800px] m-20'>
-      <div className="relative p-16 flex flex-col justify-center text-black h-full w-[45%] rounded-3xl">
+    <section className='flex flex-col lg:flex-row justify-center m-2 lg:m-10 xl:m-20'>
+      
+      {/* Left Panel */}
+      <div
+        className="relative p-4 lg:p-16 flex flex-col justify-center bg-black rounded-3xl w-full min-h-[500px] overflow-hidden"
+        data-aos="fade-right"
+      >
         <Image
-            src="/homepage/about.jpg" // Ensure this image exists in public/images
-            alt="Person filling out application form"
-            layout="fill"
-            objectFit="cover"
-            className="absolute opacity-90 rounded-3xl"
-          />
-        <div className='absolute z-10'>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-relaxed">
-          <span className="text-red-600 block">Start Your Application</span>
-          <span className="text-green-600 block">Fast, Secure, &</span>
-          <span className="text-black">Hassle-Free.</span>
-        </h2>
-        <p className="text-3xl font-bold text-white">
-          Choose your service, submit your details, and our dedicated team will get back to you promptly. Your seamless experience begins here.
-        </p>
+          src={image.src}
+          alt={image.alt}
+          fill
+          priority
+          className="absolute object-cover object-center inset-0 opacity-30 rounded-3xl"
+        />
+        <div className='relative z-10 p-6 lg:p-0'>
+          <h2 className="text-3xl lg:text-5xl md:text-6xl font-extrabold mb-6 leading-relaxed text-white drop-shadow-md">
+            {heading.map((line, idx) => (
+              <span key={idx} className={`${line.className} block`}>
+                {line.text}
+              </span>
+            ))}
+          </h2>
+          <p className="md:text-2xl font-semibold text-white drop-shadow-md max-w-3xl">
+            {description}
+          </p>
         </div>
       </div>
-      <div className='w-[40%]'>
-        <p className='text-rd text-lg font-bold border-b-[3px] border-rd w-fit ml-10'>Apply <span className='text-gn'>Online</span></p>
-        <iframe className='w-full h-[700px]' src="https://amer.zeyora.app/crm/forms/wtl/3250cfa540aeb609361b36cfb97d5b71"></iframe>
+
+      {/* Right Panel */}
+      <div className="w-full mt-10 min-h-[650px]" data-aos="fade-left">
+        <p className='text-rd text-xs lg:text-lg font-bold border-b-[3px] border-rd w-fit ml-10 mb-6'>
+          {label.main} <span className='text-gn'>{label.highlight}</span>
+        </p>
+        <div className="relative">
+          <iframe
+            src={formUrl}
+            className="absolute top-0 left-0 w-[120%] xl:scale-1 min-h-[800px] scale-[80%] origin-top-left border-0"
+            style={{ transformOrigin: 'top left' }}
+          ></iframe>
+        </div>
       </div>
     </section>
   );

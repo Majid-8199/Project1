@@ -1,36 +1,42 @@
-// components/MainServicesHeroSection.tsx
-import React from 'react';
-import Image from 'next/image';
-import { MainServicesPageData } from '../../interfaces/services';
+'use client';
 
-interface MainServicesHeroProps {
-  hero: MainServicesPageData['hero'];
-}
+import { useEffect } from "react";
+import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "aos/dist/aos.css";
 
-const HeroSection: React.FC<MainServicesHeroProps> = ({ hero }) => {
-  return (
-    <section className="relative bg-gradient-to-r from-primaryGreen to-darkGreen text-white py-20 md:py-32">
-      <Image
-        src={hero.imageUrl}
-        alt={hero.imageAlt}
-        layout="fill"
-        objectFit="cover"
-        quality={80}
-        className="opacity-20 z-0"
-      />
-      <div className="container mx-auto px-4 relative z-10 text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
-          {hero.title}
-        </h1>
-        <p className="text-xl md:text-2xl font-light mb-6 opacity-90 animate-fade-in delay-200">
-          {hero.tagline}
-        </p>
-        <p className="text-lg max-w-3xl mx-auto opacity-80 animate-fade-in delay-400">
-          {hero.description}
-        </p>
-      </div>
-    </section>
-  );
-};
+const HeroSection = ({hero} : {hero:any}) => {
+   useEffect(() => {
+     AOS.init({ duration: 1000, once: true });
+   }, []);
+ 
+   return (
+     <section className="relative min-h-[90vh] bg-black text-white overflow-hidden">
+       <Image
+         src={hero.imageUrl}
+         alt={hero.imageAlt}
+         fill
+         className="object-cover object-center opacity-30"
+         priority
+       />
+ 
+       <div className="absolute inset-0 flex items-center justify-center md:text-center px-6">
+         <div data-aos="fade-up" data-aos-delay="200">
+           <h1 className="text-4xl sm:text-6xl font-extrabold leading-snug">
+             {hero.title}
+           </h1>
+           <p className="mt-4 text-xs md:text-md">
+             {hero.tagline}
+           </p>
+           <p className="mt-4 text-sm md:text-xl lg:w-[80%] mx-auto">
+             {hero.description}
+           </p>
+         </div>
+       </div>
+     </section>
+   );
+ }
+ 
 
 export default HeroSection;

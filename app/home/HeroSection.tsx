@@ -2,23 +2,11 @@
 import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
-import { heroSlides } from '../data/homepage/heroSlides';
+import { heroSlidesContent } from '../data/home';
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef<HTMLDivElement | null>(null);
-
-  const handlePrev = () => {
-    const newIndex = currentIndex === 0 ? heroSlides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-    scrollToIndex(newIndex);
-  };
-
-  const handleNext = () => {
-    const newIndex = currentIndex === heroSlides.length - 1 ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-    scrollToIndex(newIndex);
-  };
 
   const scrollToIndex = (index: number) => {
     if (sliderRef.current) {
@@ -29,12 +17,30 @@ const HeroSection = () => {
     }
   };
 
-  // Auto slide every 5 seconds
+  const handlePrev = () => {
+    const newIndex = currentIndex === 0 ? heroSlidesContent.length - 1 : currentIndex - 1;
+    scrollToIndex(newIndex);
+    setTimeout(() => {
+      setCurrentIndex(newIndex);
+    }, 400);
+  };
+
+  const handleNext = () => {
+    const newIndex = currentIndex === heroSlidesContent.length - 1 ? 0 : currentIndex + 1;
+    scrollToIndex(newIndex);
+    setTimeout(() => {
+      setCurrentIndex(newIndex);
+    }, 400);
+  };
+
+  // Auto slide every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      const newIndex = currentIndex === heroSlides.length - 1 ? 0 : currentIndex + 1;
-      setCurrentIndex(newIndex);
+      const newIndex = currentIndex === heroSlidesContent.length - 1 ? 0 : currentIndex + 1;
       scrollToIndex(newIndex);
+      setTimeout(() => {
+        setCurrentIndex(newIndex);
+      }, 400);
     }, 4000);
 
     return () => clearInterval(interval);
@@ -62,7 +68,7 @@ const HeroSection = () => {
         className="flex h-full overflow-x-auto scroll-snap-x scroll-smooth no-scrollbar"
         style={{ scrollSnapType: 'x mandatory' }}
       >
-        {heroSlides.map((slide, index) => (
+        {heroSlidesContent.map((slide, index) => (
           <div
             key={index}
             className="relative flex items-center justify-center min-w-full h-full"
@@ -70,10 +76,28 @@ const HeroSection = () => {
           >
             <Image src={slide.src} alt="" fill className="object-cover" priority />
             <div className="absolute inset-0 bg-black opacity-50 z-[1]" />
-            <div className="absolute flex flex-col justify-center gap-3 text-white z-[2] md:w-[80%] lg:w[60%] px-5 leading-relaxed md:px-6">
-              <h1 className="text-4xl sm:text-6xl font-bold opacity-0 animate-fadeInUp">{slide.heading}</h1>
-              <p className="text-xl opacity-0 animate-fadeInUp animation-delay-500">{slide.subheading}</p>
-              <div className="flex flex-col md:flex-row md:items-center justify-start gap-2 opacity-0 animate-fadeInUp animation-delay-1000">
+
+            {/* Slide Content */}
+            <div className="absolute flex flex-col justify-center gap-3 text-white z-[2] md:w-[80%] lg:w-[60%] px-5 leading-relaxed md:px-6">
+              <h1
+                className={`text-4xl sm:text-6xl font-bold transition-opacity duration-700 ${
+                  currentIndex === index ? 'opacity-100 animate-fadeInUp' : 'opacity-0'
+                }`}
+              >
+                {slide.heading}
+              </h1>
+              <p
+                className={`text-xl transition-opacity duration-700 delay-200 ${
+                  currentIndex === index ? 'opacity-100 animate-fadeInUp' : 'opacity-0'
+                }`}
+              >
+                {slide.subheading}
+              </p>
+              <div
+                className={`flex flex-col md:flex-row md:items-center justify-start gap-2 transition-opacity duration-700 delay-500 ${
+                  currentIndex === index ? 'opacity-100 animate-fadeInUp' : 'opacity-0'
+                }`}
+              >
                 {slide.buttons.map((btn, i) => (
                   <button
                     key={i}

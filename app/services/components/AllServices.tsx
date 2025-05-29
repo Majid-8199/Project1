@@ -1,28 +1,46 @@
-// components/AllMainServicesSection.tsx
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MainServiceCard } from '../../interfaces/services';
+import { FaChevronRight } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-interface AllMainServicesProps {
-  cards: MainServiceCard[];
-}
+const AllServices = ({ cards }: { cards: any }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
 
-const AllServices: React.FC<AllMainServicesProps> = ({ cards }) => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-darkGray mb-12 relative pb-4">
+        <h2
+          className="text-4xl font-bold text-center text-darkGray mb-12 relative pb-4"
+          data-aos="fade-up"
+        >
           Our Services
-          <span className="block w-24 h-1 bg-primaryRed mx-auto mt-2"></span>
+          <span className="block w-24 h-1 bg-rd mx-auto mt-2"></span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {cards.map((card) => (
-            <Link href={`/services/${card.slug}`} key={card.id} className="block">
-              <div className="bg-cardBackground border border-primaryGreen rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer h-full flex flex-col">
-                <div className="p-6 flex-grow flex flex-col items-center text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          {cards.map((card: any, index: number) => (
+            <Link href={`/services`} key={card.id} className="block">
+              <div
+                className="bg-cardBackground border border-primaryGreen rounded-lg shadow-lg group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer h-full flex flex-col"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <div className="p-6 flex-grow flex flex-col">
                   {card.icon && (
-                    <Image src={card.icon} alt={`${card.title} Icon`} width={60} height={60} className="mb-4" />
+                    <Image
+                      src={card.icon}
+                      alt={`${card.title} Icon`}
+                      width={120}
+                      height={120}
+                      className="mb-4"
+                    />
                   )}
                   <h3 className="text-2xl font-semibold text-darkGray mb-3">
                     {card.title}
@@ -30,10 +48,12 @@ const AllServices: React.FC<AllMainServicesProps> = ({ cards }) => {
                   <p className="text-mediumGray mb-6 flex-grow">
                     {card.summary}
                   </p>
-                  <span className="text-primaryGreen font-medium hover:text-darkGreen transition-colors duration-200 flex items-center">
-                    {card.linkText}
-                    <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
-                  </span>
+                  <div className="inline-block pb-1 text-gn transition-colors duration-300">
+                    <p className="flex items-center text-sm gap-1 pl-1">
+                      Know More <FaChevronRight />
+                    </p>
+                    <span className="absolute left-0 bottom-0 w-0 h-1 bg-gn transition-all duration-500 group-hover:w-full"></span>
+                  </div>
                 </div>
               </div>
             </Link>

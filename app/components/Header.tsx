@@ -106,10 +106,10 @@ const Header = () => {
                   setIsHoveringDropdown(false);
                 }}
               >
-                <div className={`flex items-center pb-1 transition-colors duration-300 ${isHoveringDropdown ? 'text-gn gap-4' : 'gap-4'}`}>
+                <Link href={'/services'} className={`flex items-center pb-1 transition-colors duration-300 ${isHoveringDropdown ? 'text-gn gap-4' : 'gap-4'}`}>
                   <span className="">Services</span>
                   <FaChevronDown size={12} className="ml-1 mt-[2px]" />
-                </div>
+                </Link>
 
                 {isDropdownOpen && (
                   <ul className="absolute top-4 -left-14 pt-5 mt-2 bg-white text-black shadow-lg py-2 w-56 z-50">
