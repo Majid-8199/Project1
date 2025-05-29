@@ -235,32 +235,38 @@ const Header = () => {
             <li><Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link></li>
             {/* Mobile Services with Dropdown - Corrected Structure */}
             <li className="relative group cursor-pointer">
-              <Link
-                href={'/services'}
-                className={`flex justify-between items-center pb-1 ${
-                  isDropdownOpen ? 'text-gn font-semibold' : ''
-                }`}
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              >
-                <span className="transition-colors duration-300">Services</span>
-                <FaChevronDown size={12} className="ml-1 mt-[2px]" />
-              </Link>
+              <div className="flex justify-between items-center pb-1">
+                <Link 
+                  href="/services" 
+                  className={`transition-colors duration-300 ${isDropdownOpen ? 'text-green-600 font-semibold' : ''}`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Services
+                </Link>
+                <FaChevronDown 
+                  size={12} 
+                  className="ml-2 mt-[2px] cursor-pointer"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent link click
+                    setIsDropdownOpen(!isDropdownOpen);
+                  }}
+                />
+              </div>
 
               {isDropdownOpen && (
-                <ul className=" mt-2 bg-gray-50 py-2 w-full"> {/* Adjusted for mobile */}
+                <ul className="mt-2 bg-gray-50 py-2 w-full">
                   {services.map((service) => (
                     <li
                       key={service.title}
                       className="relative py-2 flex flex-col justify-between items-center"
-                      onClick={() => service.sub && setActiveSubMenu(activeSubMenu === service.title ? null : service.title)} // Toggle submenu on click for mobile
+                      onClick={() => service.sub && setActiveSubMenu(activeSubMenu === service.title ? null : service.title)}
                     >
                       <span className={`flex items-center justify-between px-2 w-full ${activeSubMenu === service.title ? 'text-green-600 font-semibold' : ''}`}>
                         {service.title}
                         {service.sub && <FaChevronRight size={10} />}
                       </span>
-                      {/* Mobile Sub Menu */}
                       {activeSubMenu === service.title && service.sub && (
-                        <ul className="mt-2 ml-4 bg-gray-100 rounded-md py-2 w-full"> {/* Adjusted for mobile */}
+                        <ul className="mt-2 ml-4 bg-gray-100 rounded-md py-2 w-full">
                           {service.sub.map((item) => (
                             <li key={item} className="py-2 whitespace-nowrap">
                               <Link href={`/services/${item.toLowerCase().replace(/\s+/g, '-')}`} onClick={() => setIsMobileMenuOpen(false)}>{item}</Link>
@@ -273,6 +279,7 @@ const Header = () => {
                 </ul>
               )}
             </li>
+
             <li><Link href="/blogs" onClick={() => setIsMobileMenuOpen(false)}>Blogs</Link></li>
             <li><Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link></li>
           </ul>
