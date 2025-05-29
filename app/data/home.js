@@ -67,7 +67,7 @@ export const aboutUsContent = {
   description: `We assist individuals and businesses with a full range of UAE government services — from visa applications and Emirates ID to labour contracts, medical typing, and PRO services. Whether you're applying for a Golden Visa, setting up a business, or resolving legal paperwork, our team ensures smooth, error-free processing — every step of the way.`,
   buttonText: "Know More",
   image: {
-    src: "/homepage/about.jpg",
+    src: "/home/about.jpg",
     alt: "Government services"
   }
 };

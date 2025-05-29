@@ -66,11 +66,11 @@ export const aboutUsContent = {
   gallery: {
     title: "Our Environment", // A new section for the image collage from Image 1
     images: [
-      { src: "/homepage/Hero1.jpg", alt: "Dubai Skyline 1" }, // Top-left
-      { src: "/homepage/Hero2.jpg", alt: "Dubai Skyline 2" }, // Bottom-left
-      { src: "/homepage/Hero3.jpg", alt: "Dubai at night" },    // Center-left
+      { src: "/aboutpage/Hero1.jpg", alt: "Dubai Skyline 1" }, // Top-left
+      { src: "/aboutpage/Hero2.jpg", alt: "Dubai Skyline 2" }, // Bottom-left
+      { src: "/aboutpage/Hero3.jpg", alt: "Dubai at night" },    // Center-left
       { src: "/aboutpage/hero.jpg", alt: "Dubai Frame" },      // Top-right
-      { src: "/homepage/about.jpg", alt: "UAE Flag" },            // Bottom-right
+      { src: "/aboutpage/about.jpg", alt: "UAE Flag" },            // Bottom-right
     ]
   },
   tagline: "We're not just a service center — we're your trusted partner in navigating UAE's administrative landscape with confidence and ease."

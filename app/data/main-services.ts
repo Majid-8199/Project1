@@ -29,7 +29,7 @@ export const mainServiceCards = [
     id: "employment-visa",
     slug: "employment-visa",
     title: "Employment Visa",
-    icon: "/services/employmentVisa.png",
+    icon: "/services/EmploymentVisa.png",
     summary: "Fast-track your Dubai work permit from offer letter to visa stamping.",
     linkText: "Know More"
   },
@@ -101,7 +101,7 @@ export const mainServiceCards = [
     id: "legal-translation-services",
     slug: "legal-translation-services",
     title: "Legal Translation Services",
-    icon: "/services/translation.png",
+    icon: "/services/Translation.png",
     summary: "Certified legal translation for contracts, certificates, and official use.",
     linkText: "Know More"
   },
@@ -117,7 +117,7 @@ export const mainServiceCards = [
     id: "certificate-attestation",
     slug: "certificate-attestation",
     title: "Certificate Attestation",
-    icon: "/services/attestation.png",
+    icon: "/services/Attestation.png",
     summary: "Authenticate your personal, academic, or commercial documents hassle-free.",
     linkText: "Know More"
   }
