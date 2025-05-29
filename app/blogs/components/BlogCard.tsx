@@ -1,9 +1,10 @@
 'use client'
 
+import BlogPost from "@/app/interface/blog";
 import Image from "next/image";
 import Link from "next/link";
 
-const BlogPostCard = ({blog } : { blog : any}) => {
+const BlogPostCard = ({blog } : { blog : BlogPost}) => {
   const formattedDate = new Date(blog.date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',

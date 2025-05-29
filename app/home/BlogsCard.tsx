@@ -2,9 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaChevronRight } from 'react-icons/fa';
+import BlogPost from '../interface/blog';
 
 
-const BlogsCard = ({ blog }: { blog: any }) => {
+const BlogsCard = ({ blog }: { blog: BlogPost }) => {
   return (
     <Link
       href={`/blogs/${blog.slug}`}

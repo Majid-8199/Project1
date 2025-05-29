@@ -6,7 +6,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "aos/dist/aos.css";
 
-const HeroSection = ({hero} : {hero:any}) => {
+interface heroSection{
+  title: string;
+  description: string;
+  tagline: string;
+  imageUrl: string;
+  imageAlt: string
+}
+
+const HeroSection = ({hero} : {hero:heroSection}) => {
    useEffect(() => {
      AOS.init({ duration: 1000, once: true });
    }, []);

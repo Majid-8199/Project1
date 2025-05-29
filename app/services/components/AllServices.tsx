@@ -5,8 +5,9 @@ import Link from 'next/link';
 import { FaChevronRight } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Service from '@/app/interface/service';
 
-const AllServices = ({ cards }: { cards: any }) => {
+const AllServices = ({ cards }: { cards: Service[] }) => {
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -25,7 +26,7 @@ const AllServices = ({ cards }: { cards: any }) => {
           <span className="block w-24 h-1 bg-rd mx-auto mt-2"></span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {cards.map((card: any, index: number) => (
+          {cards.map((card: Service, index: number) => (
             <Link href={`/services`} key={card.id} className="block">
               <div
                 className="bg-cardBackground border border-primaryGreen rounded-lg shadow-lg group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer h-full flex flex-col"

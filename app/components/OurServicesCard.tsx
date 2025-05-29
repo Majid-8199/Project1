@@ -2,8 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaChevronRight } from 'react-icons/fa';
+import Service from '../interface/service';
 
-const OurServicesCard = ({ service }: { service: any }) => {
+const OurServicesCard = ({ service }: { service: Service }) => {
   return (
     <Link
       href={`/services/${service.slug}`}
