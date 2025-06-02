@@ -11,14 +11,21 @@ const BlogPostCard = ({blog } : { blog : BlogPost}) => {
     day: 'numeric',
   });
 
+  let href: string;
+
+  if (blog.type === 'api') {
+    href = blog.link || '#';
+  } else {
+    href = blog.slug ? `/blogs/${blog.slug}` : '/blogs';
+  }
+
   return (
-    <Link href={`/blogs`} passHref className="block bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 group cursor-pointer border border-gray-100 hover:border-gn">
+    <Link href={href} passHref className="block bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 group cursor-pointer border border-gray-100 hover:border-gn">
         <div className="relative w-full h-52 overflow-hidden">
           <Image
             src={blog.imageUrl}
-            alt={blog.imageAlt}
-            layout="fill"
-            objectFit="cover"
+            alt={blog.category}
+            fill
             className="transition-transform duration-300 group-hover:scale-110"
           />
           <div className="absolute top-4 left-4 bg-gn text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">

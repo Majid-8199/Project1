@@ -15,7 +15,7 @@ const BlogsCard = ({ blog }: { blog: BlogPost }) => {
       <div className="relative w-[280px] lg:w-[250px] xl:w-[280px] h-[320px] overflow-hidden">
         <Image
           src={blog.imageUrl}
-          alt={blog.imageAlt}
+          alt={blog.category}
           fill
           className="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-[120%]"
         />

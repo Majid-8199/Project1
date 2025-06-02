@@ -101,13 +101,13 @@ const HeroSection = () => {
                 {slide.buttons.map((btn, i) => (
                   <button
                     key={i}
-                    className="relative overflow-hidden text-xs bg-white text-gn border-2 border-gn px-4 py-2 rounded-lg group transition-colors duration-300 w-fit"
+                    className="relative overflow-hidden text-xs bg-gn text-white border-2 border-gn px-4 py-2 rounded-lg group transition-colors duration-300 w-fit"
                   >
-                    <span className="relative z-10 group-hover:text-white transition-colors duration-300 flex items-center gap-1">
+                    <span className="relative z-10 group-hover:text-gn transition-colors duration-300 flex items-center gap-1">
                       {btn.label}
                       {btn.icon && <btn.icon />}
                     </span>
-                    <span className="absolute left-0 top-0 w-0 h-full bg-gn z-0 transition-all duration-300 group-hover:w-full" />
+                    <span className="absolute left-0 top-0 w-0 h-full bg-white z-0 transition-all duration-300 group-hover:w-full" />
                   </button>
                 ))}
               </div>

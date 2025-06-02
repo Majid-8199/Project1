@@ -56,6 +56,28 @@ export const heroSlidesContent = [
       }
     ],
   },
+  {
+    src: '/home/Hero4.png',
+    heading: 'Popular Visas Made Simple: Golden, Family & Tourist.',
+    subheading: 'Apply for the UAE’s most sought-after visas with confidence and expert support from our team.',
+    buttons: [
+      {
+        label: 'Golden Visa',
+        variant: 'primary',
+        icon: FaChevronRight,
+      },
+      {
+        label: 'Family Visa',
+        variant: 'whatsapp',
+        icon: FaChevronRight,
+      },
+      {
+        label: 'Tourist Visa',
+        variant: 'whatsapp',
+        icon: FaChevronRight,
+      }
+    ],
+  },
 ];
 
 export const aboutUsContent = {

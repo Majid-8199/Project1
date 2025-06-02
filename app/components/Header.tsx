@@ -185,10 +185,8 @@ const Header = () => {
 
       {/* Gradient divider */}
       <div
-        className="w-full h-[2px]"
-        style={{
-          background: 'linear-gradient(to right, #FFFFFF 0%, #11AB5D 50%, #FF0000 100%)',
-        }}
+        className="w-full h-[2px] bg-gn"
+        
       />
 
       {showSearchBar && (

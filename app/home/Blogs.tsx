@@ -1,15 +1,30 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
 import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { blogs } from '../data/blogs';
 import BlogsCard from './BlogsCard';
+import BlogPost from '../interface/blog';
+import { getApiBlogs } from '../lib/getNews';
 
 const Blogs = () => {
-  const selectedBlogs = blogs.slice(0, 4);
+  const [combinedBlogs, setCombinedBlogs] = useState<BlogPost[]>([]);
+
+  useEffect(() => {
+      const fetchAndCombineBlogs = async () => {
+        try {
+          const apiBlogs = await getApiBlogs();
+          setCombinedBlogs(apiBlogs.concat(blogs)); 
+        } catch (error) {
+          console.error("Failed to fetch API blogs:", error);
+          setCombinedBlogs(blogs); 
+        }
+      };
+      fetchAndCombineBlogs();
+    }, []);
 
   useEffect(() => {
     AOS.init({
@@ -24,7 +39,7 @@ const Blogs = () => {
 
         {/* Header */}
         <div
-          className="flex flex-col gap-4 text-center sm:text-left"
+          className="flex flex-col gap-4 md:text-center sm:text-left"
           data-aos="fade-up"
         >
           <h1 className="text-2xl font-bold">
@@ -48,7 +63,7 @@ const Blogs = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center"
           data-aos="fade-up"
         >
-          {selectedBlogs.map((blog, i) => (
+          {combinedBlogs.slice(0, 4).map((blog, i) => (
             <div key={i} data-aos="zoom-in" data-aos-delay={i * 100}>
               <BlogsCard blog={blog} />
             </div>

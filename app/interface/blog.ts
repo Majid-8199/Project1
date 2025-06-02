@@ -1,25 +1,27 @@
-interface BlogContentBlock {
-  heading?: string;
-  paragraph?: string;
-  list?: {
-    text: string;
-    description: string;
-  }[];
-}
+export type BlogContentBlock =
+  | { type: 'paragraph'; text: string }
+  | { type: 'heading'; level: number; text: string }
+  | { type: 'list'; items: string[] };
 
-interface BlogPost {
-  id: string;
-  slug: string;
+export interface BlogPost {
+  
+  id: number;
+  type: string
+  slug?: string;
   title: string;
   category: string;
   date: string;
   author: string;
   imageUrl: string;
-  imageAlt: string;
-  excerpt: string;
-  content: BlogContentBlock[];
+  excerpt?: string;
+  content?: BlogContentBlock[];
   tags: string[];
+  metaData?: {
+    title: string;
+    description: string;
+    keywords: string;
+  };
+  link?: string
 }
-
 
 export default BlogPost;
