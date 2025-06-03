@@ -120,6 +120,7 @@ const ServicesCarousel = () => {
                     src={service.icon}
                     alt={service.title}
                     fill
+                    priority
                     className="object-contain"
                   />
                 </div>
