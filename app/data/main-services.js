@@ -13,7 +13,7 @@ export const mainServiceCards = [
     id: "golden-visa-services",
     slug: "golden-visa-services",
     title: "Golden Visa Services",
-    icon: "/services/GoldenVisa.png",
+    icon: "/services/golden-visa.png",
     summary: "Secure a 10-year UAE residency — now open to more professionals.",
     linkText: "Know More"
   },
@@ -21,7 +21,7 @@ export const mainServiceCards = [
     id: "family-visa-services",
     slug: "family-visa-services",
     title: "Family Visa Services",
-    icon: "/services/FamilyVisa.png",
+    icon: "/services/family-visa.png",
     summary: "Reunite with loved ones easily — from sponsorship approvals to residency.",
     linkText: "Know More"
   },
@@ -29,7 +29,7 @@ export const mainServiceCards = [
     id: "employment-visa",
     slug: "employment-visa",
     title: "Employment Visa",
-    icon: "/services/EmploymentVisa.png",
+    icon: "/services/employment-visa.png",
     summary: "Fast-track your Dubai work permit from offer letter to visa stamping.",
     linkText: "Know More"
   },
@@ -37,7 +37,7 @@ export const mainServiceCards = [
     id: "tourist-visa",
     slug: "tourist-visa",
     title: "Tourist Visa",
-    icon: "/services/TouristVisa.png",
+    icon: "/services/tourist-visa.png",
     summary: "Plan your UAE trip with ease — flexible tourist visas and renewals.",
     linkText: "Know More"
   },
@@ -45,7 +45,7 @@ export const mainServiceCards = [
     id: "emirates-id",
     slug: "emirates-id",
     title: "Emirates ID",
-    icon: "/services/EmiratesId.png",
+    icon: "/services/emirates-id.png",
     summary: "Quick and hassle-free Emirates ID renewals, replacements, and new applications.",
     linkText: "Know More"
   },
@@ -53,7 +53,7 @@ export const mainServiceCards = [
     id: "amer-services",
     slug: "amer-services",
     title: "Amer Services",
-    icon: "/services/Amer.png",
+    icon: "/services/amer.png",
     summary: "Your trusted gateway to all Dubai government visa services.",
     linkText: "Know More"
   },
@@ -61,7 +61,7 @@ export const mainServiceCards = [
     id: "tasheel-services",
     slug: "tasheel-services",
     title: "Tas-heel Services",
-    icon: "/services/Tasheel.png",
+    icon: "/services/tasheel.png",
     summary: "All your MOHRE and labor-related paperwork handled with expertise.",
     linkText: "Know More"
   },
@@ -69,7 +69,7 @@ export const mainServiceCards = [
     id: "dubai-police",
     slug: "dubai-police",
     title: "Dubai Police",
-    icon: "/services/DubaiPolice.png",
+    icon: "/services/dubai-police.png",
     summary: "Get police clearance certificates, reports, and traffic services quickly.",
     linkText: "Know More"
   },
@@ -77,7 +77,7 @@ export const mainServiceCards = [
     id: "rta-services",
     slug: "rta-services",
     title: "RTA Services",
-    icon: "/services/RTA.png",
+    icon: "/services/rta.png",
     summary: "Vehicle registration, driving licenses, fines — all RTA tasks simplified.",
     linkText: "Know More"
   },
@@ -85,7 +85,7 @@ export const mainServiceCards = [
     id: "medical-services",
     slug: "medical-services",
     title: "Medical Services",
-    icon: "/services/Medical.png",
+    icon: "/services/medical.png",
     summary: "DHA & MOH medical fitness services for employment, residency, and renewal.",
     linkText: "Know More"
   },
@@ -93,7 +93,7 @@ export const mainServiceCards = [
     id: "business-setup-services",
     slug: "business-setup-services",
     title: "Business Setup Services",
-    icon: "/services/Business.png",
+    icon: "/services/business.png",
     summary: "Start your business in the UAE with licensing, visas, and PRO support.",
     linkText: "Know More"
   },
@@ -101,7 +101,7 @@ export const mainServiceCards = [
     id: "legal-translation-services",
     slug: "legal-translation-services",
     title: "Legal Translation Services",
-    icon: "/services/Translation.png",
+    icon: "/services/translation.png",
     summary: "Certified legal translation for contracts, certificates, and official use.",
     linkText: "Know More"
   },
@@ -109,7 +109,7 @@ export const mainServiceCards = [
     id: "document-legal-services",
     slug: "document-legal-services",
     title: "Document and Legal Services",
-    icon: "/services/Legal.png",
+    icon: "/services/legal.png",
     summary: "Attestation, notary, and legal paperwork — handled with full compliance.",
     linkText: "Know More"
   },
@@ -117,7 +117,7 @@ export const mainServiceCards = [
     id: "certificate-attestation",
     slug: "certificate-attestation",
     title: "Certificate Attestation",
-    icon: "/services/Attestation.png",
+    icon: "/services/attestation.png",
     summary: "Authenticate your personal, academic, or commercial documents hassle-free.",
     linkText: "Know More"
   }
