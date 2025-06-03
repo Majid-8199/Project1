@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { RiLoader2Fill } from "react-icons/ri";
 import AOS from "aos";
 
 export default function LoadingScreen() {

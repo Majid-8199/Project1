@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import OurServicesCard from '../components/OurServicesCard';
 import { mainServiceCards } from '../data/main-services';
+import Service from '../interface/service';
 
 const OurServices = () => {
   const [visibleCount, setVisibleCount] = useState(3);
@@ -18,7 +19,7 @@ const OurServices = () => {
     });
   }, []);
 
-  const getRandomItems = (array: any, count: number | undefined) => {
+  const getRandomItems = (array: Service[], count: number | undefined) => {
     return [...array]
       .sort(() => 0.5 - Math.random()) // Shuffle copy of array
       .slice(0, count);                // Take first N items

@@ -79,11 +79,11 @@ const Header = () => {
               setActiveSubMenu(null);
               setIsHoveringDropdown(false);
             }}
-            aria-expanded={isDropdownOpen}
           >
             <Link
               href="/services"
               className={`flex items-center pb-1 transition-colors duration-300 ${isHoveringDropdown ? 'text-gre gap-4' : 'gap-4'}`}
+              aria-expanded={isDropdownOpen}
             >
               <span>Services</span>
               <FaChevronDown size={12} className="ml-1 mt-[2px]" />
