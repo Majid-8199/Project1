@@ -1,28 +1,26 @@
 export const footerContent = {
   company: {
-    name: 'Amer and Tas-heel Service Assistance',
-    tagline: 'مساعدة في خدمات آمر و تسهيل',
+    name: 'Amer and Tas-heel Service',
+    tagline: 'خدمات آمر و تسهيل',
     logoSrc: '/logo.svg',
   },
   contact: {
     address: {
-      title: 'Office 504, Al Attar Business Center',
+      title: 'Al Rolla Rd, Al Raffa,',
       lines: [
-        'Office 504, Al Attar Business Center',
-        'Al Barsha 1, Sheikh Zayed Road',
-        'Dubai, United Arab Emirates',
-        'P.O. Box 123456',
+        'Bur Dubai, Dubai',
+        'United Arab Emirates'
       ],
       mapLink:
-        'https://www.google.com/maps?q=Office+504,+Al+Attar+Business+Center,+Al+Barsha+1,+Sheikh+Zayed+Road,+Dubai,+United+Arab+Emirates',
+        'https://maps.app.goo.gl/XHmfD5bZUDTNKSbZA',
     },
     email: {
-      label: 'info@amerandtasheel.ae',
-      link: 'mailto:info@amerandtasheel.ae',
+      label: 'amerandtasheel@gmail.com',
+      link: 'mailto:amerandtasheel@gmail.com',
     },
     phone: {
-      label: '+971 50 123 4567',
-      link: 'tel:+971501234567',
+      label: '+971 56 303 2309',
+      link: 'tel:+971563032309',
     },
   },
   navigation: {

@@ -34,12 +34,12 @@ const Blogs = () => {
   }, []);
 
   return (
-    <section className="w-full bg-white py-20 px-4 overflow-hidden">
+    <section className="bg-gray-100 w-full py-20 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col gap-10">
 
         {/* Header */}
         <div
-          className="flex flex-col gap-4 md:text-center sm:text-left"
+          className="flex flex-col gap-4"
           data-aos="fade-up"
         >
           <h1 className="text-2xl font-bold">

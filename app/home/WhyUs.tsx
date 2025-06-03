@@ -18,7 +18,7 @@ const WhyUs = () => {
   }, []);
 
   return (
-    <div className='flex flex-col lg:flex-row items-center justify-center min-h-[100vh] gap-10 px-4 overflow-x-hidden'>
+    <div className=' flex flex-col lg:flex-row items-center justify-center min-h-[100vh] gap-10 px-4 overflow-x-hidden'>
       
       {/* LEFT TEXT SECTION */}
       <div

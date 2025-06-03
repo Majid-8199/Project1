@@ -10,25 +10,25 @@ import {
 export const contactInfo = [
   {
     icon: FaMapMarkerAlt,
-    url: "https://goo.gl/maps/your-location-url",
+    url: "https://maps.app.goo.gl/XHmfD5bZUDTNKSbZA",
   },
   {
     icon: FaLinkedinIn,
-    url: "https://linkedin.com/in/your-profile",
+    url: "https://www.linkedin.com/",
   },
   {
     icon: FaWhatsapp,
-    url: "https://wa.me/yourNumber",
+    url: "https://wa.me/+971563032309",
   },
   {
     icon: FaEnvelope,
-    url: "mailto:example@example.com",
-    text: "example@example.com",
+    url: "mailto:amerandtasheel@gmail.com",
+    text: "amerandtasheel@gmail.com",
   },
   {
     icon: FaPhoneAlt,
-    url: "tel:+1234567890",
-    text: "+1 234 567 890",
+    url: "tel:+9710563032309",
+    text: "+971 563032309",
   },
   {
     text: "|"
@@ -51,12 +51,11 @@ export const contactContent = {
     officeAddress: {
       title: 'Office Address:',
       lines: [
-        'Office 504, Al Attar Business Center',
-        'Al Barsha 1, Sheikh Zayed Road',
-        'Dubai, United Arab Emirates',
-        'P.O. Box 123456',
+        'Al Rolla Rd, Al Raffa,',
+        'Bur Dubai, Dubai',
+        'United Arab Emirates'
       ],
-      link: "https://www.google.com/maps?q=Office+504,+Al+Attar+Business+Center,+Al+Barsha+1,+Sheikh+Zayed+Road,+Dubai,+United+Arab+Emirates"
+      link: "https://maps.app.goo.gl/XHmfD5bZUDTNKSbZA"
     },
     officeTiming: {
       title: 'Office Timing:',
@@ -66,17 +65,17 @@ export const contactContent = {
         'Saturday: Closed',
       ]
     },
-    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.5678070966956!2d55.20147981498661!3d25.110599683935293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43503b53f62b%3A0xc3f8f01c4e7f6d1!2sAl%20Attar%20Business%20Center!5e0!3m2!1sen!2sae!4v1678901234567!5m2!1sen!2sae',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.3997089888203!2d55.28494337521355!3d25.25713607767238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f439d5c463977%3A0x9ec8bd258056919!2sAmer%20And%20Tasheel%20services!5e0!3m2!1sen!2sbh!4v1748918957656!5m2!1sen!2sbh',
   },
   contactUs: {
     heading: 'Contact Us',
     email: {
-      label: 'info@amerandtasheel.ae',
-      link: 'mailto:info@amerandtasheel.ae'
+      label: 'amerandtasheel@gmail.com',
+      link: 'mailto:amerandtasheel@gmail.com'
     },
     phone: {
-      label: '+971 50 123 4567',
-      link: 'tel:+971501234567'
+      label: '+971 56 303 2309',
+      link: 'tel:+971563032309'
     },
     whatsapp: 'Message Us'
   },

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import { heroSlidesContent } from '../data/home';
+import Link from 'next/link';
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -75,7 +76,7 @@ const HeroSection = () => {
             style={{ scrollSnapAlign: 'start' }}
           >
             <Image src={slide.src} alt="" fill className="object-cover" priority />
-            <div className="absolute inset-0 bg-black opacity-50 z-[1]" />
+            <div className="absolute inset-0 bg-black opacity-60 z-[1]" />
 
             {/* Slide Content */}
             <div className="absolute flex flex-col justify-center gap-3 text-white z-[2] md:w-[80%] lg:w-[60%] px-5 leading-relaxed md:px-6">
@@ -99,16 +100,16 @@ const HeroSection = () => {
                 }`}
               >
                 {slide.buttons.map((btn, i) => (
-                  <button
+                  <Link href={btn.link}
                     key={i}
-                    className="relative overflow-hidden text-xs bg-gn text-white border-2 border-gn px-4 py-2 rounded-lg group transition-colors duration-300 w-fit"
+                    className="relative overflow-hidden font-bold bg-gn text-white border-2 border-gn px-4 py-2 rounded-lg group transition-colors duration-300 w-fit"
                   >
                     <span className="relative z-10 group-hover:text-gn transition-colors duration-300 flex items-center gap-1">
                       {btn.label}
                       {btn.icon && <btn.icon />}
                     </span>
                     <span className="absolute left-0 top-0 w-0 h-full bg-white z-0 transition-all duration-300 group-hover:w-full" />
-                  </button>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -8,7 +8,7 @@ const OurServicesCard = ({ service }: { service: Service }) => {
   return (
     <Link
       href={`/services/${service.slug}`}
-      className="group m-auto relative overflow-hidden flex flex-col justify-between gap-4 p-4 w-full h-[290px] border-2 rounded-2xl border-gn transition-transform duration-300 hover:-translate-y-1"
+      className="bg-white group m-auto  relative overflow-hidden flex flex-col justify-between gap-4 p-4 w-full h-[290px] border-2 rounded-2xl border-white transition-transform duration-300 hover:-translate-y-1"
     >
       {/* Animated Overlay */}
       <div className="absolute inset-0 bg-gn opacity-0 group-hover:opacity-100 transition-all duration-500 origin-bottom-left scale-0 group-hover:scale-100 z-0 rounded-xl" style={{ transformOrigin: 'bottom left' }}></div>

@@ -18,7 +18,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section className="bg-white min-h-[100vh] flex items-center px-4 xl:mx-20 overflow-x-hidden">
+    <section className="bg-white mb-20 flex items-center px-4 xl:mx-20 overflow-x-hidden">
       <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
         
         {/* LEFT CONTENT */}
@@ -45,7 +45,7 @@ const AboutUs = () => {
 
         {/* IMAGE */}
         <div
-          className="mt-20 lg:mt-0 rounded-2xl overflow-hidden shadow-lg order-1 relative h-[400px]"
+          className="md:mt-20 lg:mt-0 rounded-2xl overflow-hidden shadow-lg order-1 relative h-[400px]"
           data-aos="fade-right"
         >
           <Image
