@@ -1,4 +1,4 @@
-import {contactInfo} from '../data/contacts';
+import { contactInfo } from '../data/contacts';
 
 const HeaderContacts = () => {
   return (
@@ -14,23 +14,24 @@ const HeaderContacts = () => {
 
           if (!IconComponent && item.text) {
             return (
-              <span key={index} className="mx-1">
+              <span key={item.id || index} className="mx-1">
                 {item.text}
               </span>
             );
           }
 
           return (
-            <div key={index} className="flex items-center">
+            <div key={item.id || index} className="flex items-center">
               {item.url ? (
                 <a
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1"
+                  aria-label={item.text}
                 >
                   <IconComponent size={15} />
-                  {item?.text && <p className='text-xs hidden sm:block pb-'>{item.text}</p>}
+                  {item.text && <p className="text-xs hidden sm:block">{item.text}</p>}
                 </a>
               ) : (
                 <div className="flex items-center gap-1 text-xs">

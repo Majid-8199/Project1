@@ -111,11 +111,11 @@ const ServicesCarousel = () => {
               href={`/services/${service.slug}`}
               data-aos="fade-right"
               data-aos-delay={index * 100}
-              className={`flex-shrink-0 w-52 h-30 rounded-xl ${design.border} border-2 ${design.mainBg} ${design.hoverEffect} shadow-lg transition-all duration-500 ease-in-out overflow-hidden relative group`}
+              className={`flex-shrink-0 w-40 h-40 rounded-xl ${design.border} border-2 ${design.mainBg} ${design.hoverEffect} shadow-lg transition-all duration-500 ease-in-out overflow-hidden relative group`}
             >
               {/* Icon Section (Animated on hover) */}
-              <div className={`h-14 ${design.iconBg} flex items-center justify-center group-hover:p-2 p-1 transition-all duration-500 group-hover:h-3/5`}>
-                <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-150">
+              <div className={`h-32 ${design.iconBg} flex items-center justify-center group-hover:p-2 p-1 transition-all duration-500 group-hover:h-3/4`}>
+                <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-110">
                   <Image
                     src={service.icon}
                     alt={service.title}
@@ -126,7 +126,7 @@ const ServicesCarousel = () => {
               </div>
 
               {/* Text Section (Slides up on hover) */}
-              <div className={`h-8 ${design.mainBg} flex flex-col justify-center items-center p-4 transition-all duration-500 group-hover:h-2/5`}>
+              <div className={`h-10 ${design.mainBg} flex flex-col justify-center items-center p-4 transition-all duration-500 group-hover:h-1/4`}>
                 <h3 className={`text-xs font-bold ${design.titleColor} mb-2 text-center`}>
                   {service.title}
                 </h3>

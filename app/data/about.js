@@ -21,56 +21,56 @@ export const aboutUsContent = {
     promiseText: "That's Our Promise",
     tagline: "Trusted by professionals, families, and businesses across the UAE.",
     items: [
-      {
-        heading: "All-in-One Services",
-        description: "From visa applications to business setup and legal documentation — everything you need in one place.",
-        icon: "/features/1.png", // SVG path relative to public/icons/
-      },
-      {
-        heading: "Digital Convenience",
-        description: "Apply from your phone, chat with our team on WhatsApp, or visit in person — we're wherever you need us.",
-        icon: "/features/2.png",
-      },
-      {
-        heading: "Expert Support Team",
-        description: "Our experienced professionals guide you step-by-step, ensuring a smooth and stress-free process.",
-        icon: "/features/3.png",
-      },
-      {
-        heading: "Personal & Corporate",
-        description: "Whether you're an individual, family, or a large organization — we tailor our services to fit your unique needs.",
-        icon: "/features/4.png",
-      },
-      {
-        heading: "Fast Processing",
-        description: "We prioritize speed without compromising accuracy. Get your paperwork done faster than ever.",
-        icon: "/features/5.png",
-      },
-      {
-        heading: "Trusted & Approved",
-        description: "We're a certified Amer & Tasheel partner — reliable, compliant, and committed to excellence.",
-        icon: "/features/6.png",
-      },
-      {
-        heading: "Government Authorized",
-        description: "Officially licensed and approved to handle Amer, Tasheel, RTA, and other UAE government services.",
-        icon: "/features/7.png",
-      },
-      {
-        heading: "Secure Data Handling",
-        description: "We follow strict data protection protocols to ensure your personal and business information stays private and protected.",
-        icon: "/features/8.png",
-      },
-    ],
+        {
+            img: '/features/1.png',
+            heading: 'All-in-One Services',
+            description: 'From visa applications to business setup and legal documentation — everything you need in one place.'
+        },
+        {
+            img: '/features/2.png',
+            heading: 'Fast Processing',
+            description: 'We prioritize speed without compromising accuracy. Get your paperwork done faster than ever.'
+        }
+        ,{
+            img: '/features/3.png',
+            heading: 'Digital Convinience',
+            description: 'Apply from your phone, chat with our team on WhatsApp, or visit in person — we’re wherever you need us.'
+        },
+        {
+            img: '/features/4.png',
+            heading: 'Trusted and Approved',
+            description: "We're a certified Amer & Tasheel partner — reliable, compliant, and committed to excellence."
+        },
+        {
+            img: '/features/8.png',
+            heading: 'Expert Support Team',
+            description: 'Our experienced professionals guide you step-by-step, ensuring a smooth and stress-free process.'
+        },
+        {
+            img: '/features/7.png',
+            heading: 'Government Authorized',
+            description: 'Officially licensed and approved to handle Amer, Tasheel, RTA, and other UAE government services.'
+        }
+        ,{
+            img: '/features/5.png',
+            heading: 'Personal & Corperate',
+            description: "Whether you're an individual, family, or a large organization — we tailor our services to fit your unique needs."
+        },
+        {
+            img: '/features/6.png',
+            heading: 'Secure Data Handling',
+            description: 'We follow strict data protection protocols to ensure your personal and business information stays private and protected.'
+        }
+    ]
   },
   gallery: {
     title: "Our Environment", // A new section for the image collage from Image 1
     images: [
-      { src: "/aboutpage/Hero1.jpg", alt: "Dubai Skyline 1" }, // Top-left
-      { src: "/aboutpage/Hero2.jpg", alt: "Dubai Skyline 2" }, // Bottom-left
-      { src: "/aboutpage/Hero3.jpg", alt: "Dubai at night" },    // Center-left
-      { src: "/aboutpage/hero.jpg", alt: "Dubai Frame" },      // Top-right
-      { src: "/aboutpage/about.jpg", alt: "UAE Flag" },            // Bottom-right
+      { src: "/aboutpage/1.jpg", alt: "Dubai Skyline 1" }, // Top-left
+      { src: "/aboutpage/2.jpg", alt: "Dubai Skyline 2" }, // Bottom-left
+      { src: "/aboutpage/3.jpg", alt: "Dubai at night" },    // Center-left
+      { src: "/aboutpage/4.jpg", alt: "Dubai Frame" },      // Top-right
+      { src: "/aboutpage/5.jpg", alt: "UAE Flag" },            // Bottom-right
     ]
   },
   tagline: "We're not just a service center — we're your trusted partner in navigating UAE's administrative landscape with confidence and ease."

@@ -6,9 +6,19 @@ import BlogPost from '../interface/blog';
 
 
 const BlogsCard = ({ blog }: { blog: BlogPost }) => {
+
+  let href: string;
+
+  if (blog.type === 'api') {
+    href = blog.link || '#';
+  } else {
+    href = blog.slug ? `/blogs/${blog.slug}` : '/blogs';
+  }
+
   return (
     <Link
-      href={`/blogs/${blog.slug}`}
+      href={href}
+      target='_blank'
       className="relative w-full max-w-[280px] h-[320px] rounded-2xl overflow-hidden shadow-md group"
     >
       {/* Image Wrapper with Zoom Effect */}

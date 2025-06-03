@@ -29,7 +29,7 @@ const AllServices = ({ cards }: { cards: Service[] }) => {
           {cards.map((card: Service, index: number) => (
             <Link href={`/services`} key={card.id} className="block">
               <div
-                className="bg-cardBackground border border-primaryGreen rounded-lg shadow-lg group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer h-full flex flex-col"
+                className="bg-cardBackground relative border border-primaryGreen rounded-lg shadow-lg group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer h-full flex flex-col"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
@@ -49,13 +49,13 @@ const AllServices = ({ cards }: { cards: Service[] }) => {
                   <p className="text-mediumGray mb-6 flex-grow">
                     {card.summary}
                   </p>
-                  <div className="inline-block pb-1 text-gn transition-colors duration-300">
+                  <div className="inline-block pb-1 text-gre transition-colors duration-300">
                     <p className="flex items-center text-sm gap-1 pl-1">
                       Know More <FaChevronRight />
                     </p>
-                    <span className="absolute left-0 bottom-0 w-0 h-1 bg-gn transition-all duration-500 group-hover:w-full"></span>
                   </div>
                 </div>
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-gre transition-all duration-500 group-hover:w-full"></span>
               </div>
             </Link>
           ))}

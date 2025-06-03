@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import HeaderContacts from "./components/HeaderContacts";
+import HeaderContacts from "./components/HeaderContacts";import LoadingWrapper from "./components/LoadingWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,20 +21,19 @@ export const metadata: Metadata = {
     "Hassle-free Amer & Tasheel services in UAE — visa, PRO, typing & more.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({  children, }: Readonly<{   children: React.ReactNode; }>) {
+  
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <HeaderContacts />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <LoadingWrapper>
+          <HeaderContacts />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </LoadingWrapper>
       </body>
     </html>
   );

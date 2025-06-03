@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gn: '#02A653',
+        gn: '#059669',
+        gre: '#02A653',
         rd: '#EB1D26',
         background: "var(--background)",
         foreground: "var(--foreground)",

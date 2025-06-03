@@ -16,3 +16,8 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
+
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}

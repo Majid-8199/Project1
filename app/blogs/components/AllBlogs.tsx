@@ -31,22 +31,26 @@ export default function BlogListing() {
     fetchAndCombineBlogs();
   }, []);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      AOS.init({
-        duration: 800,
-        once: true,
-        initClassName: 'aos-init',
-        startEvent: 'DOMContentLoaded',
-        disable: window.innerWidth < 768
-      });
-      
-      setTimeout(() => {
-        AOS.refresh();
-        setAosInitialized(true);
-      }, 0);
-    }
-  }, []);
+useEffect(() => {
+  if (typeof window !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      once: true,
+      initClassName: 'aos-init',
+      startEvent: 'DOMContentLoaded',
+      disable: window.innerWidth < 768
+    });
+
+    const refreshTimeout = setTimeout(() => {
+      AOS.refreshHard(); // <- use refreshHard instead of refresh
+      setAosInitialized(true);
+    }, 100); // Delay is important
+
+    return () => clearTimeout(refreshTimeout);
+  }
+}, []);
+
+
 
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -135,8 +139,24 @@ function Pagination({
   handlePageChange: (page: number) => void;
   aosInitialized: boolean;
 }) {
+
+  // Show pages around current page for small screens
+  const getPagesToShow = () => {
+    if (totalPages <= 5) return Array.from({ length: totalPages }, (_, i) => i + 1);
+
+    // Show currentPage -1, currentPage, currentPage +1 on small screens
+    if (currentPage === 1) return [1, 2, 3];
+    if (currentPage === totalPages) return [totalPages - 2, totalPages - 1, totalPages];
+    return [currentPage - 1, currentPage, currentPage + 1];
+  };
+
+  const pagesToShow = getPagesToShow();
+
   return (
-    <div className="flex justify-center items-center space-x-2 mt-8" {...(aosInitialized && { "data-aos": "fade-up" })}>
+    <div
+      className="flex flex-wrap justify-center items-center space-x-2 space-y-2 mt-8"
+      {...(aosInitialized && { "data-aos": "fade-up" })}
+    >
       <button
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
@@ -144,19 +164,41 @@ function Pagination({
       >
         Previous
       </button>
-      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-        <button
-          key={page}
-          onClick={() => handlePageChange(page)}
-          className={`px-4 py-2 rounded-lg font-semibold ${
-            currentPage === page
-              ? 'bg-gn text-white'
-              : 'bg-gray-100 text-black hover:bg-green-100'
-          } transition-colors duration-200`}
-        >
-          {page}
-        </button>
-      ))}
+
+      {/* Large screens: show all pages */}
+      <div className="hidden sm:flex space-x-2">
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          <button
+            key={page}
+            onClick={() => handlePageChange(page)}
+            className={`px-4 py-2 rounded-lg font-semibold ${
+              currentPage === page
+                ? 'bg-gn text-white'
+                : 'bg-gray-100 text-black hover:bg-green-100'
+            } transition-colors duration-200`}
+          >
+            {page}
+          </button>
+        ))}
+      </div>
+
+      {/* Small screens: show fewer pages */}
+      <div className="flex sm:hidden space-x-2">
+        {pagesToShow.map((page) => (
+          <button
+            key={page}
+            onClick={() => handlePageChange(page)}
+            className={`px-2 xs:px-3 py-1.5 rounded-lg font-semibold text-sm ${
+              currentPage === page
+                ? 'bg-gn text-white'
+                : 'bg-gray-100 text-black hover:bg-green-100'
+            } transition-colors duration-200`}
+          >
+            {page}
+          </button>
+        ))}
+      </div>
+
       <button
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={currentPage === totalPages}

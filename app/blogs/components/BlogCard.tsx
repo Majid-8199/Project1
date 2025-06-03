@@ -26,7 +26,7 @@ const BlogPostCard = ({blog } : { blog : BlogPost}) => {
             src={blog.imageUrl}
             alt={blog.category}
             fill
-            className="transition-transform duration-300 group-hover:scale-110"
+            className="transition-transform duration-300 group-hover:scale-110 object-cover"
           />
           <div className="absolute top-4 left-4 bg-gn text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
             {blog.category}

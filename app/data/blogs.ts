@@ -3,7 +3,7 @@ import BlogPost from "../interface/blog";
 export const heroContent = {
   title: "Insights, Updates & Guides",
   subtitle: "Stay informed with the latest updates on visas, government processes, business setup, and more.",
-  image: "/blogs/hero.jpg",
+  image: "/blogs/hero.png",
 };
 
 

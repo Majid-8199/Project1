@@ -10,7 +10,7 @@ export const applyOnlineContent = {
     highlight: "Online"
   },
   image: {
-    src: "/contact/applyOnline.svg",
+    src: "/contact/apply-online.png",
     alt: "Person filling out application form"
   },
   formUrl: "https://amer.zeyora.app/crm/forms/wtl/3250cfa540aeb609361b36cfb97d5b71"

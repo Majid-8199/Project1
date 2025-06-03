@@ -29,7 +29,7 @@ const ApplyOnlineForm = () => {
           className="absolute object-cover object-center inset-0 opacity-30 rounded-3xl"
         />
         <div className='relative z-10 p-6 lg:p-0'>
-          <h2 className="text-3xl lg:text-5xl md:text-6xl font-extrabold mb-6 leading-relaxed text-white drop-shadow-md">
+          <h2 className="text-3xl lg:text-5xl md:text-6xl font-extrabold mb-6 leading-loose text-white drop-shadow-md">
             {heading.map((line, idx) => (
               <span key={idx} className={`${line.className} block`}>
                 {line.text}

@@ -41,7 +41,7 @@ const ContactUsSection = () => {
     <section className="bg-white text-black py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-xl shadow-2xl overflow-hidden">
         {/* Left Section */}
-        <div className="bg-gn text-white p-8 relative" data-aos="fade-right">
+        <div className="bg-gre text-white p-8 relative" data-aos="fade-right">
           <h2 className="text-base text-black font-bold border-b-[3px] w-fit border-black uppercase tracking-widest mb-8">
             {contactContent.visitUs.heading.split(' ')[0]}{' '}
             <span className="text-rd">{contactContent.visitUs.heading.split(' ')[1]}</span>
@@ -110,12 +110,12 @@ const ContactUsSection = () => {
                   {contactContent.contactUs.phone.label}
                 </Link>
               </div>
-              <button className="relative overflow-hidden text-xs bg-white text-gn border-2 border-white px-8 py-4 rounded-lg group transition-colors duration-300">
+              <button className="relative overflow-hidden text-xs bg-white text-gre border-2 border-white px-8 py-4 rounded-lg group transition-colors duration-300">
                 <span className="relative z-10 group-hover:text-white transition-colors duration-300 flex items-center gap-4 font-bold text-lg">
                   {contactContent.contactUs.whatsapp}
                   <FaWhatsapp size={24} />
                 </span>
-                <span className="absolute left-0 top-0 w-0 h-full bg-gn z-0 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute left-0 top-0 w-0 h-full bg-gre z-0 transition-all duration-300 group-hover:w-full" />
               </button>
             </div>
           </div>
@@ -124,7 +124,7 @@ const ContactUsSection = () => {
         {/* Right Section */}
         <div className="p-8 bg-gray-50 flex flex-col justify-center" data-aos="fade-left">
           <h3 className="text font-bold border-b-[3px] border-rd w-fit uppercase tracking-widest mb-8 text-center lg:text-left">
-            <span className='text-rd'>{contactContent.messageForm.heading.split(' / ')[0]}</span> / <span className='text-gn'>{contactContent.messageForm.heading.split(' / ')[1]}</span>
+            <span className='text-rd'>{contactContent.messageForm.heading.split(' / ')[0]}</span> / <span className='text-gre'>{contactContent.messageForm.heading.split(' / ')[1]}</span>
           </h3>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -179,7 +179,7 @@ const ContactUsSection = () => {
             <div>
               <button
                 type="submit"
-                className="w-full inline-flex justify-center py-4 px-8 border border-transparent rounded-lg shadow-lg text-lg font-bold text-white bg-gn hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600 transition-colors duration-300 transform hover:-translate-y-0.5"
+                className="w-full inline-flex justify-center py-4 px-8 border border-transparent rounded-lg shadow-lg text-lg font-bold text-white bg-gre hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600 transition-colors duration-300 transform hover:-translate-y-0.5"
               >
                 {contactContent.messageForm.inputs.submit}
               </button>

@@ -18,6 +18,14 @@ const OurServices = () => {
     });
   }, []);
 
+  const getRandomItems = (array: any, count: number | undefined) => {
+    return [...array]
+      .sort(() => 0.5 - Math.random()) // Shuffle copy of array
+      .slice(0, count);                // Take first N items
+  };
+
+  const randomServices = getRandomItems(selectedService, visibleCount);
+
   // Responsive card count
   useEffect(() => {
     const updateVisibleCount = () => {
@@ -34,7 +42,7 @@ const OurServices = () => {
   }, []);
 
   return (
-    <section className='w-full bg-gn py-16 px-4 overflow-x-hidden'>
+    <section className='w-full bg-black bg-opacity-90 py-16 px-4 overflow-x-hidden'>
       <div className='max-w-6xl mx-auto flex flex-col gap-10'>
         
         {/* Header Section */}
@@ -64,7 +72,7 @@ const OurServices = () => {
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
-          {selectedService.slice(0, visibleCount).map((service, index) => (
+          {randomServices.map((service, index) => (
             <div
               key={index}
               data-aos="zoom-in"
