@@ -5,7 +5,7 @@ const HeaderContacts = () => {
     <div
       className="flex justify-end gap-5 items-center text-white px-2 py-1 md:pr-5 text-sm"
       style={{
-        background: 'linear-gradient(to right, #FFFFFF 0%, #11AB5D 50%, #FF0000 100%)',
+        background: 'linear-gradient(to right, #FFFFFF 0%, #059669 50%, #EB1D26 100%)',
       }}
     >
       <div className="flex items-center gap-3 md:gap-5">

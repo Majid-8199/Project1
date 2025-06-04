@@ -117,7 +117,7 @@ export const mainServiceCards = [
     id: "certificate-attestation",
     slug: "certificate-attestation",
     title: "Certificate Attestation",
-    icon: "/services/attestation.png",
+    icon: "/services/certificate-attestation.png",
     summary: "Authenticate your personal, academic, or commercial documents hassle-free.",
     linkText: "Know More"
   }

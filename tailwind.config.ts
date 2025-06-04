@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         gn: '#059669',
-        gre: '#02A653',
+        gre: '#059669',
         rd: '#EB1D26',
         background: "var(--background)",
         foreground: "var(--foreground)",
