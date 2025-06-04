@@ -1,12 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import React, { useState, useEffect, FormEvent, ChangeEvent } from 'react';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
 import { FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa6';
 import { contactContent } from '../../data/contacts';
 import { MdLocationOn } from 'react-icons/md';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const ContactUsSection = () => {
   const [formData, setFormData] = useState({
@@ -15,10 +13,6 @@ const ContactUsSection = () => {
     email: '',
     message: '',
   });
-
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -41,7 +35,7 @@ const ContactUsSection = () => {
     <section className="bg-white text-black py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-xl shadow-2xl overflow-hidden">
         {/* Left Section */}
-        <div className="bg-gre text-white p-8 relative" data-aos="fade-right">
+        <div className="bg-gre text-white p-8 relative">
           <h2 className="text-base text-black font-bold border-b-[3px] w-fit border-black uppercase tracking-widest mb-8">
             {contactContent.visitUs.heading.split(' ')[0]}{' '}
             <span className="text-rd">{contactContent.visitUs.heading.split(' ')[1]}</span>
@@ -122,7 +116,7 @@ const ContactUsSection = () => {
         </div>
 
         {/* Right Section */}
-        <div className="p-8 bg-gray-50 flex flex-col justify-center" data-aos="fade-left">
+        <div className="p-8 bg-gray-50 flex flex-col justify-center">
           <h3 className="text font-bold border-b-[3px] border-rd w-fit uppercase tracking-widest mb-8 text-center lg:text-left">
             <span className='text-rd'>{contactContent.messageForm.heading.split(' / ')[0]}</span> / <span className='text-gre'>{contactContent.messageForm.heading.split(' / ')[1]}</span>
           </h3>

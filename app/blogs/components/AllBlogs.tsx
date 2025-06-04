@@ -4,8 +4,6 @@ import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { blogs } from '../../data/blogs';
 import BlogPostCard from './BlogCard';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { getApiBlogs } from '@/app/lib/getNews';
 import { BlogPost } from '@/app/interface/blog';
 
@@ -14,7 +12,6 @@ const POSTS_PER_PAGE = 6;
 export default function BlogListing() {
   const [combinedBlogs, setCombinedBlogs] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
-  const [aosInitialized, setAosInitialized] = useState(false);
 
   useEffect(() => {
     const fetchAndCombineBlogs = async () => {
@@ -30,27 +27,6 @@ export default function BlogListing() {
     };
     fetchAndCombineBlogs();
   }, []);
-
-useEffect(() => {
-  if (typeof window !== 'undefined') {
-    AOS.init({
-      duration: 800,
-      once: true,
-      initClassName: 'aos-init',
-      startEvent: 'DOMContentLoaded',
-      disable: window.innerWidth < 768
-    });
-
-    const refreshTimeout = setTimeout(() => {
-      AOS.refreshHard(); // <- use refreshHard instead of refresh
-      setAosInitialized(true);
-    }, 100); // Delay is important
-
-    return () => clearTimeout(refreshTimeout);
-  }
-}, []);
-
-
 
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -85,10 +61,9 @@ useEffect(() => {
   return (
     <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 mt-10">
       <div className="max-w-7xl mx-auto">
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
           {currentBlogs.map((blog) => (
-            <div key={blog.id} {...(aosInitialized && { "data-aos": "fade-up" })}>
+            <div key={blog.id}>
               <BlogPostCard blog={blog} />
             </div>
           ))}
@@ -99,7 +74,6 @@ useEffect(() => {
             currentPage={currentPage}
             totalPages={totalPages}
             handlePageChange={handlePageChange}
-            aosInitialized={aosInitialized}
           />
         )}
       </div>
@@ -131,20 +105,14 @@ function NoPostsState() {
 function Pagination({
   currentPage,
   totalPages,
-  handlePageChange,
-  aosInitialized
+  handlePageChange
 }: {
   currentPage: number;
   totalPages: number;
   handlePageChange: (page: number) => void;
-  aosInitialized: boolean;
 }) {
-
-  // Show pages around current page for small screens
   const getPagesToShow = () => {
     if (totalPages <= 5) return Array.from({ length: totalPages }, (_, i) => i + 1);
-
-    // Show currentPage -1, currentPage, currentPage +1 on small screens
     if (currentPage === 1) return [1, 2, 3];
     if (currentPage === totalPages) return [totalPages - 2, totalPages - 1, totalPages];
     return [currentPage - 1, currentPage, currentPage + 1];
@@ -153,10 +121,7 @@ function Pagination({
   const pagesToShow = getPagesToShow();
 
   return (
-    <div
-      className="flex flex-wrap justify-center items-center space-x-2 space-y-2 mt-8"
-      {...(aosInitialized && { "data-aos": "fade-up" })}
-    >
+    <div className="flex flex-wrap justify-center items-center space-x-2 space-y-2 mt-8">
       <button
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
@@ -165,7 +130,6 @@ function Pagination({
         Previous
       </button>
 
-      {/* Large screens: show all pages */}
       <div className="hidden sm:flex space-x-2">
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
           <button
@@ -182,7 +146,6 @@ function Pagination({
         ))}
       </div>
 
-      {/* Small screens: show fewer pages */}
       <div className="flex sm:hidden space-x-2">
         {pagesToShow.map((page) => (
           <button

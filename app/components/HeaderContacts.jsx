@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { contactInfo } from '../data/contacts';
 
 const HeaderContacts = () => {
@@ -5,40 +6,52 @@ const HeaderContacts = () => {
     <div
       className="flex justify-end gap-5 items-center text-white px-2 py-1 md:pr-5 text-sm"
       style={{
-        background: 'linear-gradient(to right, #FFFFFF 0%, #059669 50%, #EB1D26 100%)',
+        background:
+          'linear-gradient(to right, #FFFFFF 0%, #059669 50%, #EB1D26 100%)',
       }}
     >
       <div className="flex items-center gap-3 md:gap-5">
         {contactInfo.map((item, index) => {
-          const IconComponent = item.icon;
+          const Icon = item.icon;
+          const key = item.id || index;
 
-          if (!IconComponent && item.text) {
+          if (!Icon && item.text) {
             return (
-              <span key={item.id || index} className="mx-1">
+              <span
+                key={key}
+                className="mx-1 text-xs sm:text-sm whitespace-nowrap"
+              >
                 {item.text}
               </span>
             );
           }
 
+          if (item.url) {
+            return (
+              <Link
+                key={key}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-xs sm:text-sm"
+                aria-label={item.text || 'External link'}
+                title={item.text || 'Open link'}
+              >
+                {Icon && <Icon size={15} aria-hidden="true" focusable="false" />}
+                {item.text && <span className="hidden sm:inline">{item.text}</span>}
+              </Link>
+            );
+          }
+
           return (
-            <div key={item.id || index} className="flex items-center">
-              {item.url ? (
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1"
-                  aria-label={item.text}
-                >
-                  <IconComponent size={15} />
-                  {item.text && <p className="text-xs hidden sm:block">{item.text}</p>}
-                </a>
-              ) : (
-                <div className="flex items-center gap-1 text-xs">
-                  <IconComponent size={15} />
-                  {item.text && <span>{item.text}</span>}
-                </div>
-              )}
+            <div
+              key={key}
+              className="flex items-center gap-1 text-xs sm:text-sm"
+              aria-label={item.text || 'Contact info'}
+              title={item.text || ''}
+            >
+              {Icon && <Icon size={15} aria-hidden="true" focusable="false" />}
+              {item.text && <span>{item.text}</span>}
             </div>
           );
         })}

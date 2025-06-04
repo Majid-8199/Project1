@@ -1,8 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import OurServicesCard from '../components/OurServicesCard';
 import { mainServiceCards } from '../data/main-services';
 import Service from '../interface/service';
@@ -10,14 +8,6 @@ import Service from '../interface/service';
 const OurServices = () => {
   const [visibleCount, setVisibleCount] = useState(3);
   const selectedService = mainServiceCards;
-
-  // Initialize AOS
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
 
   const getRandomItems = (array: Service[], count: number | undefined) => {
     return [...array]
@@ -31,10 +21,9 @@ const OurServices = () => {
   useEffect(() => {
     const updateVisibleCount = () => {
       const width = window.innerWidth;
-      if (width >= 1024) setVisibleCount(5);        // xl
-      else if (width >= 768) setVisibleCount(3); 
-      else if (width >= 640) setVisibleCount(4);   // lg
-      else setVisibleCount(3);                      // sm, md
+      if (width >= 1280) setVisibleCount(5);       // xl
+      else if (width >= 1024) setVisibleCount(4);  // lg
+      else setVisibleCount(3);
     };
 
     updateVisibleCount();
@@ -47,7 +36,7 @@ const OurServices = () => {
       <div className='max-w-6xl mx-auto flex flex-col gap-10'>
         
         {/* Header Section */}
-        <div className='text-center flex flex-col gap-4' data-aos="fade-up">
+        <div className='text-center flex flex-col gap-4'>
           <h1 className='text-5xl font-bold text-white'>Our Services</h1>
           <div className='w-24 h-1 bg-rd mx-auto'></div>
           <p className='text-lg text-white max-w-3xl mx-auto'>
@@ -75,9 +64,7 @@ const OurServices = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
           {randomServices.map((service, index) => (
             <div
-              key={index}
-              data-aos="zoom-in"
-              data-aos-delay={index * 100}
+              key={service.id}
               className="w-full"
             >
               <OurServicesCard service={service} />

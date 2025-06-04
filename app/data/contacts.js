@@ -90,3 +90,59 @@ export const contactContent = {
     }
   }
 };
+
+// // Before: import { ..., FaGlobe } from 'react-icons/fa';
+// // Add specific icons from react-icons/fa to match what you use in HeaderContacts
+// import {
+//   FaMapMarkerAlt,
+//   FaWhatsapp,
+//   FaLinkedinIn,
+//   FaPhoneAlt,
+//   FaEnvelope,
+//   FaGlobe,
+// } from 'react-icons/fa';
+
+// export const contactInfo = (lang) => [
+//   {
+//     icon: FaMapMarkerAlt,
+//     url: "https://maps.app.goo.gl/YourActualGoogleMapsLinkHere", // Replace with actual Google Maps link
+//     text: { en: "Location", ar: "الموقع" },
+//     ariaLabel: { en: "Our Location on Map", ar: "موقعنا على الخريطة" },
+//   },
+//   {
+//     icon: FaLinkedinIn,
+//     url: "https://www.linkedin.com/company/amer-tasheel-services", // Replace with actual LinkedIn profile
+//     text: { en: "LinkedIn", ar: "لينكد إن" },
+//     ariaLabel: { en: "Amer and Tasheel Services LinkedIn Profile", ar: "ملف شركة عامر وتسهيل للخدمات على لينكد إن" },
+//   },
+//   {
+//     icon: FaWhatsapp,
+//     url: "https://wa.me/+971563032309",
+//     text: { en: "WhatsApp", ar: "واتساب" },
+//     ariaLabel: { en: "Message us on WhatsApp", ar: "راسلنا على واتساب" },
+//   },
+//   {
+//     icon: FaEnvelope,
+//     url: "mailto:amerandtasheel@gmail.com",
+//     text: { en: "Email", ar: "البريد الإلكتروني" },
+//     ariaLabel: { en: "Email Amer and Tasheel Services", ar: "البريد الإلكتروني لخدمات عامر وتسهيل" },
+//   },
+//   {
+//     icon: FaPhoneAlt,
+//     url: "tel:+971563032309",
+//     text: { en: "+971 563032309", ar: "+٩٧١ ٥٦ ٣٠٣ ٢٣٠٩" }, // Localize numbers if preferred
+//     ariaLabel: { en: "Call Amer and Tasheel Services", ar: "اتصل بخدمات عامر وتسهيل" },
+//   },
+//   // The separator and language toggle should be handled outside the map for better control
+//   // { text: "|", className: "mx-1" }, // Removed from here
+//   // {
+//   //   icon: FaGlobe,
+//   //   text: { en: "العربية", ar: "English" }, // This will be the language toggle
+//   //   id: "language-toggle", // Add a unique ID for the language toggle
+//   // },
+// ];
+
+// // Note: For the actual language toggle in the header,
+// // you'll likely want a separate component or logic
+// // that manages the `lang` state and then renders the `FaGlobe` icon
+// // with the appropriate text (e.g., "العربية" when in English, "English" when in Arabic).

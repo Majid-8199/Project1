@@ -101,7 +101,7 @@ export const mainServiceCards = [
     id: "legal-translation-services",
     slug: "legal-translation-services",
     title: "Legal Translation Services",
-    icon: "/services/translation.png",
+    icon: "/services/legal-translation-services.png",
     summary: "Certified legal translation for contracts, certificates, and official use.",
     linkText: "Know More"
   },

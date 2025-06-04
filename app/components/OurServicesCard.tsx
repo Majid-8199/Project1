@@ -15,7 +15,14 @@ const OurServicesCard = ({ service }: { service: Service }) => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col gap-4">
-        <Image src={service.icon} height={80} width={80} alt={service.title} className="shrink-0" />
+        <Image
+          src={service.icon}
+          height={80}
+          width={80}
+          alt={service.title}
+          loading="lazy"
+        />
+
         <h6 className="text-2xl font-extrabold text-gray-800 group-hover:text-white transition-colors duration-300">
           {service.title}
         </h6>

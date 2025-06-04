@@ -1,12 +1,8 @@
-import React from 'react'
-import ApplyOnlineForm from './componets/ApplyOnlineForm'
+import React from 'react';
+import ApplyOnlineForm from './components/ApplyOnlineForm';
 
-const applyOnline = () => {
-  return (
-    <>
-        <ApplyOnlineForm/>
-    </>
-  )
-}
+const ApplyOnlinePage = () => {
+  return <ApplyOnlineForm />;
+};
 
-export default applyOnline
+export default ApplyOnlinePage;

@@ -4,37 +4,27 @@ import React from 'react';
 import { FaChevronRight } from 'react-icons/fa';
 import BlogPost from '../interface/blog';
 
-
 const BlogsCard = ({ blog }: { blog: BlogPost }) => {
-
-  let href: string;
-
-  if (blog.type === 'api') {
-    href = blog.link || '#';
-  } else {
-    href = blog.slug ? `/blogs/${blog.slug}` : '/blogs';
-  }
+  const isExternal = blog.type === 'api';
+  const href = isExternal ? blog.link || '#' : blog.slug ? `/blogs/${blog.slug}` : '/blogs';
 
   return (
     <Link
       href={href}
-      target='_blank'
+      {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
       className="relative w-full max-w-[280px] h-[320px] rounded-2xl overflow-hidden shadow-md group"
     >
-      {/* Image Wrapper with Zoom Effect */}
       <div className="relative w-[280px] lg:w-[250px] xl:w-[280px] h-[320px] overflow-hidden">
         <Image
           src={blog.imageUrl}
-          alt={blog.category}
+          alt={blog.title || blog.category || 'Blog image'}
           fill
           className="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-[120%]"
         />
       </div>
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
 
-      {/* Text & Icon */}
       <div className="absolute inset-0 z-20 flex flex-col justify-between p-4 text-white">
         <h6 className="text-2xl font-extrabold mt-2">{blog.title}</h6>
         <div className="flex justify-between">

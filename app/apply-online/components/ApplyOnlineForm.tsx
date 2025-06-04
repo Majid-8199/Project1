@@ -1,17 +1,11 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { applyOnlineContent } from '../../data/applyonline';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const ApplyOnlineForm = () => {
   const { heading, description, label, image, formUrl } = applyOnlineContent;
-
-  useEffect(() => {
-    AOS.init({ duration: 800, once: true });
-  }, []);
 
   return (
     <section className='flex flex-col lg:flex-row justify-center m-2 lg:m-10 xl:m-20'>
@@ -25,7 +19,7 @@ const ApplyOnlineForm = () => {
           src={image.src}
           alt={image.alt}
           fill
-          priority
+          priority // ✅ keep hero image as priority
           className="absolute object-cover object-center inset-0 opacity-30 rounded-3xl"
         />
         <div className='relative z-10 p-6 lg:p-0'>

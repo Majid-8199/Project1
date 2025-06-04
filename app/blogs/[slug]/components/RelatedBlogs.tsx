@@ -1,8 +1,7 @@
 // components/RelatedBlogs.tsx
 import React from 'react';
-import { BlogPost } from '../../../interface/blog'; // Adjust path if needed
+import { BlogPost } from '../../../interface/blog';
 import BlogPostCard from '../../components/BlogCard';
-
 
 interface RelatedBlogsProps {
   blogs: BlogPost[];

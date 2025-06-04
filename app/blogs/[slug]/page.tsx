@@ -28,7 +28,6 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
 
 // 3. Component implementation
 export default async function BlogPage({ params }: BlogPageProps) {
-  // Extract the actual params (works at runtime)
   const actualParams = await params;
   const blog = blogs.find((b) => b.slug === actualParams.slug);
 
@@ -36,15 +35,25 @@ export default async function BlogPage({ params }: BlogPageProps) {
     notFound();
   }
 
-  const relatedBlogs = blogs
-    .filter((b) => b.category === blog.category && b.slug !== blog.slug)
-    .slice(0, 3);
+  // Step 1: Filter related blogs (same category, excluding current)
+  const relatedBlogs = blogs.filter(
+    (b) => b.category === blog.category && b.slug !== blog.slug
+  );
+
+  // Step 2: If related < 3, fill with other blogs not including current or already added
+  const relatedSet = new Set(relatedBlogs.map((b) => b.slug));
+  const fallbackBlogs = blogs
+    .filter((b) => b.slug !== blog.slug && !relatedSet.has(b.slug))
+    .slice(0, 3 - relatedBlogs.length);
+
+  // Combine both
+  const finalRelatedBlogs = [...relatedBlogs, ...fallbackBlogs].slice(0, 3);
 
   return (
     <main className="px-4 sm:px-6 lg:px-8 py-12 max-w-5xl mx-auto">
       <BlogHeroSection blog={blog} />
       <BlogDetails blog={blog} />
-      <RelatedBlogs blogs={relatedBlogs} />
+      <RelatedBlogs blogs={finalRelatedBlogs} />
     </main>
   );
 }
