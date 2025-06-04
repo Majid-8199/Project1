@@ -11,7 +11,7 @@ const BlogPostCard = ({ blog }: { blog: BlogPost }) => {
     day: 'numeric',
   });
 
-  let href: string = blog.type === 'api' ? blog.link || '#' : blog.slug ? `/blogs/${blog.slug}` : '/blogs';
+  const href: string = blog.type === 'api' ? blog.link || '#' : blog.slug ? `/blogs/${blog.slug}` : '/blogs';
 
   return (
     <Link href={href} passHref className="block bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 group cursor-pointer border border-gray-100 hover:border-gn">

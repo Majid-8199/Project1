@@ -62,7 +62,7 @@ const OurServices = () => {
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
-          {randomServices.map((service, index) => (
+          {randomServices.map((service) => (
             <div
               key={service.id}
               className="w-full"

@@ -1,6 +1,3 @@
-'use client';
-
-import React, { useEffect } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
 import WhyUsCard from './WhyUsCard';
 import { Features } from '../data/features';

@@ -1,5 +1,3 @@
-'use client';
-import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaChevronRight } from 'react-icons/fa';
@@ -17,7 +15,7 @@ const AllServices = ({ cards }: { cards: Service[] }) => {
           <span className="block w-24 h-1 bg-rd mx-auto mt-2"></span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {cards.map((card: Service, index: number) => (
+          {cards.map((card: Service) => (
             <Link
               href={`/services/${card.slug ?? card.id}`} // assuming slug or id is available
               key={card.id}
