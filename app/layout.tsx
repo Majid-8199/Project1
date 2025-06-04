@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HeaderContacts from "./components/HeaderContacts";
 import LoadingWrapper from "./components/LoadingWrapper";
+import FloatingContactButton from "./components/FloatingContactButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -82,7 +83,7 @@ export default function RootLayout({
         <LoadingWrapper>
           <HeaderContacts />
           <Header />
-          <main>{children}</main>
+          <FloatingContactButton />          <main>{children}</main>
           <Footer />
         </LoadingWrapper>
       </body>

@@ -2,10 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
     images: {
-        domains: [
-        'media.assettype.com',
-        'www.emirates247.com'
-        ],
+  remotePatterns: [
+                {
+                protocol: 'https',
+                hostname: '**', // Allow all domains (not recommended for production)
+                }
+            ]
     }
 };
 
