@@ -2,7 +2,7 @@ import { FaChevronRight, FaWhatsapp } from 'react-icons/fa';
 
 export const heroSlidesContent = [
   {
-    src: '/home/Hero1.jpg',
+    src: '/home/Hero1.webp',
     heading: 'Your One-Stop Destination for All Government Services.',
     subheading: 'From visa applications to labor contracts, get all your government services handled hassle-free.',
     buttons: [
@@ -20,7 +20,7 @@ export const heroSlidesContent = [
     ],
   },
   {
-    src: '/home/Hero4.png',
+    src: '/home/Hero4.webp',
     heading: 'Popular Visas Made Simple: Golden, Family & Tourist.',
     subheading: 'Apply for the UAE’s most sought-after visas with confidence and expert support from our team.',
     buttons: [
@@ -45,7 +45,7 @@ export const heroSlidesContent = [
     ],
   },
   {
-    src: '/home/Hero3.png',
+    src: '/home/Hero3.webp',
     heading: 'Official Dubai & UAE Services, Delivered with Pride.',
     subheading: 'We handle the paperwork — you focus on your future. Trusted for visas, labor, Emirates ID & more.',
     buttons: [
@@ -70,7 +70,7 @@ export const heroSlidesContent = [
     ],
   },
   {
-    src: '/home/Hero2.jpg',
+    src: '/home/Hero2.webp',
     heading: 'Everything Explained. Everything Done Right.',
     subheading: 'We walk you through every process, ensuring your forms and documents are handled with precision and care.',
     buttons: [
@@ -99,7 +99,7 @@ export const aboutUsContent = {
   description: `We assist individuals and businesses with a full range of UAE government services — from visa applications and Emirates ID to labour contracts, medical typing, and PRO services. Whether you're applying for a Golden Visa, setting up a business, or resolving legal paperwork, our team ensures smooth, error-free processing — every step of the way.`,
   buttonText: "Know More",
   image: {
-    src: "/home/about.png",
+    src: "/home/about.webp",
     alt: "Government services"
   }
 };

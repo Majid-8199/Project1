@@ -3,7 +3,7 @@ import BlogPost from "../interface/blog";
 export const heroContent = {
   title: "Insights, Updates & Guides",
   subtitle: "Stay informed with the latest updates on visas, government processes, business setup, and more.",
-  image: "/blogs/hero.png",
+  image: "/blogs/hero.webp",
 };
 
 
@@ -15,7 +15,7 @@ export const blogs = [
     "category": "Amer Services",
     "date": "2024-05-01",
     "author": "Admin",
-    "imageUrl": "/blogs/1.png",
+    "imageUrl": "/blogs/1.webp",
     "excerpt": "How to Apply for a Family Visa in Dubai: Step-by-Step Guide - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Family Visa",
@@ -87,7 +87,7 @@ export const blogs = [
     "category": "Emirates ID",
     "date": "2024-05-03",
     "author": "Admin",
-    "imageUrl": "/blogs/2.png",
+    "imageUrl": "/blogs/2.webp",
     "excerpt": "Emirates ID Renewal Process in the UAE - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Emirates ID",
@@ -159,7 +159,7 @@ export const blogs = [
     "category": "Tasheel Services",
     "date": "2024-05-05",
     "author": "Admin",
-    "imageUrl": "/blogs/3.png",
+    "imageUrl": "/blogs/3.webp",
     "excerpt": "Tasheel Work Permit Services: What You Need to Know - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Work Permit",
@@ -231,7 +231,7 @@ export const blogs = [
     "category": "RTA Services",
     "date": "2024-05-07",
     "author": "Admin",
-    "imageUrl": "/blogs/4.png",
+    "imageUrl": "/blogs/4.webp",
     "excerpt": "RTA Driving License Renewal: A Complete Guide - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "RTA",
@@ -303,7 +303,7 @@ export const blogs = [
     "category": "MOFAIC Services",
     "date": "2024-05-09",
     "author": "Admin",
-    "imageUrl": "/blogs/5.png",
+    "imageUrl": "/blogs/5.webp",
     "excerpt": "MOFAIC Document Attestation in Dubai: Complete Guide - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "MOFAIC",
@@ -374,7 +374,7 @@ export const blogs = [
     "category": "Medical Services",
     "date": "2024-05-11",
     "author": "Admin",
-    "imageUrl": "/blogs/6.png",
+    "imageUrl": "/blogs/6.webp",
     "excerpt": "Medical Test for UAE Residency Visa: What to Expect - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Medical Test",
@@ -445,7 +445,7 @@ export const blogs = [
     "category": "Business Setup Services",
     "date": "2024-05-13",
     "author": "Admin",
-    "imageUrl": "/blogs/7.png",
+    "imageUrl": "/blogs/7.webp",
     "excerpt": "Business Setup in Dubai: Mainland vs Free Zone - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Business Setup",
@@ -517,7 +517,7 @@ export const blogs = [
     "category": "Amer Services",
     "date": "2024-05-15",
     "author": "Admin",
-    "imageUrl": "/blogs/8.png",
+    "imageUrl": "/blogs/8.webp",
     "excerpt": "Entry Permit Application in Dubai: Everything You Need - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Entry Permit",
@@ -588,7 +588,7 @@ export const blogs = [
     "category": "Dubai Police Services",
     "date": "2024-05-17",
     "author": "Admin",
-    "imageUrl": "/blogs/9.png",
+    "imageUrl": "/blogs/9.webp",
     "excerpt": "Dubai Police Good Conduct Certificate Guide - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Good Conduct",
@@ -659,7 +659,7 @@ export const blogs = [
     "category": "Emirates ID",
     "date": "2024-05-19",
     "author": "Admin",
-    "imageUrl": "/blogs/10.png",
+    "imageUrl": "/blogs/10.webp",
     "excerpt": "How to Update Passport Details in Emirates ID - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Emirates ID",
@@ -730,7 +730,7 @@ export const blogs = [
     "category": "Golden Visa",
     "date": "2024-05-21",
     "author": "Admin",
-    "imageUrl": "/blogs/11.png",
+    "imageUrl": "/blogs/11.webp",
     "excerpt": "Golden Visa UAE: Eligibility and Application - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Golden Visa",
@@ -801,7 +801,7 @@ export const blogs = [
     "category": "ICP Services",
     "date": "2024-05-23",
     "author": "Admin",
-    "imageUrl": "/blogs/12.png",
+    "imageUrl": "/blogs/12.webp",
     "excerpt": "ICP Smart Services: Overview and Benefits - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "ICP Services",
@@ -872,7 +872,7 @@ export const blogs = [
     "category": "Amer Services",
     "date": "2024-05-25",
     "author": "Admin",
-    "imageUrl": "/blogs/13.png",
+    "imageUrl": "/blogs/13.webp",
     "excerpt": "Amer Services: Complete List of Services Offered - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Amer Services",
@@ -943,7 +943,7 @@ export const blogs = [
     "category": "Dubai Customs",
     "date": "2024-05-27",
     "author": "Admin",
-    "imageUrl": "/blogs/14.png",
+    "imageUrl": "/blogs/14.webp",
     "excerpt": "Dubai Customs Registration for New Businesses - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Dubai Customs",
@@ -1014,7 +1014,7 @@ export const blogs = [
     "category": "Municipality Services",
     "date": "2024-05-29",
     "author": "Admin",
-    "imageUrl": "/blogs/15.png",
+    "imageUrl": "/blogs/15.webp",
     "excerpt": "Municipality Approval for Commercial Activities - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Municipality",
@@ -1085,7 +1085,7 @@ export const blogs = [
     "category": "Amer Services",
     "date": "2024-05-31",
     "author": "Admin",
-    "imageUrl": "/blogs/16.png",
+    "imageUrl": "/blogs/16.webp",
     "excerpt": "Visa Cancellation in Dubai: Step-by-Step Process - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Visa Cancellation",
@@ -1156,7 +1156,7 @@ export const blogs = [
     "category": "Document and Legal Services",
     "date": "2024-06-02",
     "author": "Admin",
-    "imageUrl": "/blogs/17.png",
+    "imageUrl": "/blogs/17.webp",
     "excerpt": "Translation Services for Official Documents in UAE - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Translation",
@@ -1228,7 +1228,7 @@ export const blogs = [
     "category": "ICP Services",
     "date": "2024-06-04",
     "author": "Admin",
-    "imageUrl": "/blogs/18.png",
+    "imageUrl": "/blogs/18.webp",
     "excerpt": "E-channel Registration for Businesses in the UAE - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "E-channel",
@@ -1299,7 +1299,7 @@ export const blogs = [
     "category": "Amer Services",
     "date": "2024-06-06",
     "author": "Admin",
-    "imageUrl": "/blogs/19.png",
+    "imageUrl": "/blogs/19.webp",
     "excerpt": "UAE Tourist Visa Extension: All You Need to Know - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Tourist Visa",
@@ -1370,7 +1370,7 @@ export const blogs = [
     "category": "Tasheel Services",
     "date": "2024-06-08",
     "author": "Admin",
-    "imageUrl": "/blogs/20.png",
+    "imageUrl": "/blogs/20.webp",
     "excerpt": "Labour Contract Amendment via Tasheel - Learn everything you need to know, including procedures, documents, and common mistakes to avoid.",
     "tags": [
       "Labour Contract",
@@ -1441,7 +1441,7 @@ export const blogs = [
     "category": "Tasheel Services",
     "date": "2024-06-10",
     "author": "Admin",
-    "imageUrl": "/blogs/21.png",
+    "imageUrl": "/blogs/21.webp",
     "excerpt": "How to Renew Your Labour Card in Dubai - Learn about eligibility, required documents, fees, and how to avoid common mistakes.",
     "tags": ["Labour Card", "Tasheel", "MOHRE", "Renewal"],
     "metaData": {
@@ -1490,7 +1490,7 @@ export const blogs = [
     "category": "Document and Legal Services",
     "date": "2024-06-12",
     "author": "Admin",
-    "imageUrl": "/blogs/22.png",
+    "imageUrl": "/blogs/22.webp",
     "excerpt": "Typing Services for Visa Applications - Get help filling out forms for visas, immigration, and legal documents with professional typing centers.",
     "tags": ["Typing Services", "Visa Forms", "Documentation"],
     "metaData": {
@@ -1530,7 +1530,7 @@ export const blogs = [
     "category": "RTA Services",
     "date": "2024-06-14",
     "author": "Admin",
-    "imageUrl": "/blogs/23.png",
+    "imageUrl": "/blogs/23.webp",
     "excerpt": "How to Get a No Objection Certificate (NOC) for Business Activity in Dubai. Understand requirements and how to apply.",
     "tags": ["NOC", "RTA", "Business Services", "Permits"],
     "metaData": {
@@ -1570,7 +1570,7 @@ export const blogs = [
     "category": "Business Setup Services",
     "date": "2024-06-15",
     "author": "Admin",
-    "imageUrl": "/blogs/24.png",
+    "imageUrl": "/blogs/24.webp",
     "excerpt": "Opening a Company Immigration File in Dubai - Learn the steps for employers to legally sponsor employees.",
     "tags": ["Company File", "Business Setup", "Immigration"],
     "metaData": {
@@ -1610,7 +1610,7 @@ export const blogs = [
     "category": "Document and Legal Services",
     "date": "2024-06-17",
     "author": "Admin",
-    "imageUrl": "/blogs/25.png",
+    "imageUrl": "/blogs/25.webp",
     "excerpt": "Power of Attorney Drafting Services in Dubai - What you need to include and how to get it notarized.",
     "tags": ["POA", "Legal Services", "Notary", "Document Drafting"],
     "metaData": {
@@ -1650,7 +1650,7 @@ export const blogs = [
     "category": "Emirates ID",
     "date": "2024-06-18",
     "author": "Admin",
-    "imageUrl": "/blogs/26.png",
+    "imageUrl": "/blogs/26.webp",
     "excerpt": "How to Apply for Emirates ID After Visa Stamping - Know the exact steps, timelines, and where to apply.",
     "tags": ["Emirates ID", "Visa Stamping", "ICP Services"],
     "metaData": {
@@ -1690,7 +1690,7 @@ export const blogs = [
     "category": "Medical Services",
     "date": "2024-06-19",
     "author": "Admin",
-    "imageUrl": "/blogs/27.png",
+    "imageUrl": "/blogs/27.webp",
     "excerpt": "VIP Medical Test for UAE Residency: Fast-Track Service - Get results in hours instead of days.",
     "tags": ["Medical Test", "VIP Service", "Fast-Track", "Residency"],
     "metaData": {
@@ -1730,7 +1730,7 @@ export const blogs = [
     "category": "MOFAIC Services",
     "date": "2024-06-21",
     "author": "Admin",
-    "imageUrl": "/blogs/28.png",
+    "imageUrl": "/blogs/28.webp",
     "excerpt": "How to Get MOFAIC Attestation for Education Documents - Required for employment, visas, and university admissions in UAE.",
     "tags": ["MOFAIC", "Attestation", "Education", "Certificates"],
     "metaData": {
@@ -1770,7 +1770,7 @@ export const blogs = [
     "category": "Amer Services",
     "date": "2024-06-22",
     "author": "Admin",
-    "imageUrl": "/blogs/29.png",
+    "imageUrl": "/blogs/29.webp",
     "excerpt": "How to Cancel an Entry Permit in the UAE - Guide to stop unused visas before expiry or fines.",
     "tags": ["Entry Permit", "Visa Cancellation", "Amer Services"],
     "metaData": {
@@ -1810,7 +1810,7 @@ export const blogs = [
     "category": "Business Setup Services",
     "date": "2024-06-24",
     "author": "Admin",
-    "imageUrl": "/blogs/30.png",
+    "imageUrl": "/blogs/30.webp",
     "excerpt": "Setting Up an E-Trader License in Dubai - A guide for online business owners operating from home.",
     "tags": ["E-Trader License", "Business Setup", "DED", "Dubai Online"],
     "metaData": {

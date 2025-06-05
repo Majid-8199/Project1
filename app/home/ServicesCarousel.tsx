@@ -103,7 +103,7 @@ const ServicesCarousel = () => {
         aria-roledescription="carousel"
         aria-label="Popular services carousel"
         tabIndex={0}
-        className="flex overflow-x-auto no-scrollbar scroll-smooth gap-6 px-20 pt-8 pb-16"
+        className="flex overflow-x-auto no-scrollbar scroll-smooth gap-6 px-2 md:px-4 xl:px-20 pt-8 pb-16"
       >
         {mainServiceCards.map((service, index) => {
           const design = cardDesigns[index % cardDesigns.length];

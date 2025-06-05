@@ -50,7 +50,7 @@ const Header = () => {
     <div className="h-[62px] sticky top-0 z-[100] bg-white">
       <div className="w-full h-[60px] px-2 lg:px-5 xl:px-10 flex items-center justify-between">
         <Link href="/" className="flex items-center justify-center gap-2">
-          <Image src="/LogoandName.svg" alt="Logo" width={220} height={40} className="w-[150px] xs:w-[170px] sm:w-[220px]" />
+          <Image src="/LogoandName.webp" alt="Logo" width={220} height={40} className="w-[150px] xs:w-[170px] sm:w-[220px]" />
         </Link>
 
         <ul className="hidden md:flex text-sm items-center gap-4 lg:gap-10 xl:gap-16 relative z-50">
