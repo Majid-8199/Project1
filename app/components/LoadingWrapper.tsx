@@ -22,7 +22,7 @@ export default function LoadingWrapper({ children }: { children: React.ReactNode
     return (
       <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-black">
         <Image
-          src="/services/amer.png"
+          src="/services/amer.webp"
           alt="Loading..."
           width={50}
           height={50}

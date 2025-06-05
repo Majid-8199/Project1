@@ -42,7 +42,7 @@ export const contactInfo = [
 export const heroContent = {
   title: "We’re Here to Help — Reach Out Anytime",
   subtitle: "Have questions or need help with a service? Our team is here to assist you — online, by phone, or in person.",
-  image: "/contact/Hero.svg",
+  image: "/contact/hero.webp",
 };
 
 export const contactContent = {
