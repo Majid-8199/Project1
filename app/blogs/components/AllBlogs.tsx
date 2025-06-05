@@ -137,7 +137,19 @@ function Pagination({
         {PAGINATION_LABELS.previous}
       </button>
 
-      {/* rest of pagination buttons */}
+      {pagesToShow.map((page) => (
+        <button
+          key={page}
+          onClick={() => handlePageChange(page)}
+          className={`px-4 py-2 rounded-lg border ${
+            page === currentPage
+              ? 'bg-green-100 text-gn font-bold'
+              : 'border-gn text-gn hover:bg-green-50'
+          } transition-colors duration-200`}
+        >
+          {page}
+        </button>
+      ))}
 
       <button
         onClick={() => handlePageChange(currentPage + 1)}
@@ -149,3 +161,4 @@ function Pagination({
     </div>
   );
 }
+
