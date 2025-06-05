@@ -2,10 +2,8 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { mainServiceCards } from '../data/main-services';
+import { mainServiceCards, servicesCatouselContent } from '../data/main-services';
 import { useEffect, useRef, useState } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const cardDesigns = [
@@ -35,10 +33,8 @@ const cardDesigns = [
 const ServicesCarousel = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
-
-  useEffect(() => {
-    AOS.init({ duration: 500, once: true }); // Slightly smoother animation
-  }, []);
+  const { heading, highlightWord, highlightColor } = servicesCatouselContent;
+  const [before, after] = heading.split(highlightWord);
 
   useEffect(() => {
     const scrollInterval = setInterval(() => {
@@ -71,8 +67,10 @@ const ServicesCarousel = () => {
     <section className="py-10 relative overflow-hidden">
       <div className="flex items-center justify-between px-2 md:px-4 xl:px-20">
         <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
-          Our <span className="text-gn">Popular</span> Services
-        </h2>
+        {before}
+        <span className={highlightColor}>{highlightWord}</span>
+        {after}
+      </h2>
         <div className="flex items-center justify-center gap-2 w-fit">
           <button
             onClick={() => scroll('left')}

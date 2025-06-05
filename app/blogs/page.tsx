@@ -1,11 +1,11 @@
 import HeroSection from './components/HeroSection';
-import AllBlogsWrapper from './components/AllBlogsWrapper';
+import AllBlogs from './components/AllBlogs'
 
 const Blog = () => {
   return (
     <>
       <HeroSection />
-      <AllBlogsWrapper />
+      <AllBlogs />
     </>
   );
 };

@@ -9,12 +9,11 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ hero }: { hero: HeroSectionProps }) => {
-
   return (
     <section className="relative min-h-[90vh] bg-black text-white overflow-hidden">
       <Image
         src={hero.imageUrl}
-        alt=""  // Decorative background, empty alt for screen readers
+        alt="" // Decorative background
         aria-hidden="true"
         fill
         className="object-cover object-center opacity-30"
@@ -22,7 +21,7 @@ const HeroSection = ({ hero }: { hero: HeroSectionProps }) => {
       />
 
       <div className="absolute inset-0 flex items-center justify-center md:text-center px-6">
-        <div>
+        <div className="animate-fadeInUp"> {/* <-- Animation class added here */}
           <h1 className="text-4xl sm:text-6xl font-extrabold leading-snug">
             {hero.title}
           </h1>
@@ -35,5 +34,6 @@ const HeroSection = ({ hero }: { hero: HeroSectionProps }) => {
     </section>
   );
 };
+
 
 export default HeroSection;

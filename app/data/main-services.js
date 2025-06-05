@@ -1,5 +1,11 @@
 // app/data/main-services.ts
 
+export const servicesCatouselContent = {
+  heading: 'Our Popular Services',
+  highlightWord: 'Popular',
+  highlightColor: 'text-gn',
+};
+
 export const heroSection = {
     title: "Your Trusted Partner for Government Services in the UAE",
     tagline: "Simplifying Visas, Residency, and Official Documentation",

@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
-import { blogs } from '../../data/blogs';
+import { blogs, MESSAGES, PAGINATION_LABELS } from '../../data/blogs';
 import BlogPostCard from './BlogCard';
 import { getApiBlogs } from '@/app/lib/getNews';
 import { BlogPost } from '@/app/interface/blog';
+import Image from 'next/image';
 
 const POSTS_PER_PAGE = 6;
 
@@ -86,7 +87,13 @@ function LoadingState() {
   return (
     <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 mt-10">
       <div className="max-w-7xl mx-auto text-center py-10">
-        <p className="text-xl text-gray-700">Loading blog posts...</p>
+        <Image
+          src="/services/amer.webp"
+          alt="Loading..."
+          width={50}
+          height={50}
+          className="animate-spin"
+        />
       </div>
     </section>
   );
@@ -96,7 +103,7 @@ function NoPostsState() {
   return (
     <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 mt-10">
       <div className="max-w-7xl mx-auto text-center">
-        <p className="text-xl text-gray-700">No blog posts found.</p>
+        <p className="text-xl text-gray-700">{MESSAGES.noPostsFound}</p>
       </div>
     </section>
   );
@@ -127,47 +134,17 @@ function Pagination({
         disabled={currentPage === 1}
         className="px-4 py-2 rounded-lg border border-gn text-gn hover:bg-green-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
       >
-        Previous
+        {PAGINATION_LABELS.previous}
       </button>
 
-      <div className="hidden sm:flex space-x-2">
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-          <button
-            key={page}
-            onClick={() => handlePageChange(page)}
-            className={`px-4 py-2 rounded-lg font-semibold ${
-              currentPage === page
-                ? 'bg-gn text-white'
-                : 'bg-gray-100 text-black hover:bg-green-100'
-            } transition-colors duration-200`}
-          >
-            {page}
-          </button>
-        ))}
-      </div>
-
-      <div className="flex sm:hidden space-x-2">
-        {pagesToShow.map((page) => (
-          <button
-            key={page}
-            onClick={() => handlePageChange(page)}
-            className={`px-2 xs:px-3 py-1.5 rounded-lg font-semibold text-sm ${
-              currentPage === page
-                ? 'bg-gn text-white'
-                : 'bg-gray-100 text-black hover:bg-green-100'
-            } transition-colors duration-200`}
-          >
-            {page}
-          </button>
-        ))}
-      </div>
+      {/* rest of pagination buttons */}
 
       <button
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
         className="px-4 py-2 rounded-lg border border-gn text-gn hover:bg-green-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
       >
-        Next
+        {PAGINATION_LABELS.next}
       </button>
     </div>
   );

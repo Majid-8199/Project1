@@ -103,3 +103,46 @@ export const aboutUsContent = {
     alt: "Government services"
   }
 };
+
+export const blogSectionContent = {
+  headingParts: [
+    { text: 'Helpful ', className: '' },
+    { text: 'Insights', className: 'text-gn' },
+    { text: ' & ', className: '' },
+    { text: 'Updates', className: 'text-rd' }
+  ],
+  subheading: 'Stay informed with tips, updates, and guides on UAE government processes.',
+  cta: {
+    text: 'Know More',
+    href: '/'
+  }
+};
+
+export const whyUsSectionContent = {
+  intro: 'Why Choose Us?',
+  headingParts: [
+    { text: 'Smart', className: 'text-rd' },
+    { text: ', ' },
+    { text: 'Fast', className: 'text-gn' },
+    { text: ', and Reliable — That’s Our Promise' }
+  ],
+  subheading: 'Trusted by professionals, families, and businesses across the UAE.',
+  button: {
+    label: 'Know More',
+    href: '/why-us'
+  }
+};
+
+export const ourServicesContent = {
+  heading: 'Our Services',
+  subheading:
+    'We provide complete government support services in the Dubai and UAE — from visa applications and Emirates ID to business setup and legal documentation.',
+  buttons: {
+    viewAll: 'View All Services',
+    applyOnline: 'Apply Online',
+  },
+  ariaLabels: {
+    viewAll: 'Browse all available services',
+    applyOnline: 'Apply for services online',
+  },
+};

@@ -1,11 +1,26 @@
 import BlogPost from "../interface/blog";
 
+export const POSTS_PER_PAGE = 6;
+
+export const MESSAGES = {
+  noPostsFound: "No blog posts found.",
+  loadingAltText: "Loading...",
+};
+
+export const PAGINATION_LABELS = {
+  previous: "Previous",
+  next: "Next",
+};
+
 export const heroContent = {
   title: "Insights, Updates & Guides",
   subtitle: "Stay informed with the latest updates on visas, government processes, business setup, and more.",
   image: "/blogs/hero.webp",
 };
 
+export const blogCardText = {
+  byLabel: 'By',
+};
 
 export const blogs = [
   {

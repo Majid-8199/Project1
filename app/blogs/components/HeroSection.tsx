@@ -15,7 +15,7 @@ const HeroSection = () => {
       />
 
       <div className="absolute inset-0 flex items-center justify-center md:text-center px-6">
-        <div>
+        <div className="animate-fadeInUp"> {/* Animation added here */}
           <h1 className="text-4xl sm:text-6xl font-extrabold leading-snug">
             {heroContent.title}
           </h1>

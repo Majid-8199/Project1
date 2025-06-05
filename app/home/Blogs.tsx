@@ -7,6 +7,7 @@ import { blogs } from '../data/blogs';
 import BlogsCard from './BlogsCard';
 import BlogPost from '../interface/blog';
 import { getApiBlogs } from '../lib/getNews';
+import { blogSectionContent } from '../data/home';
 
 const Blogs = () => {
   const [combinedBlogs, setCombinedBlogs] = useState<BlogPost[]>([]);
@@ -30,16 +31,20 @@ const Blogs = () => {
 
         {/* Header */}
         <div className="flex flex-col gap-4">
-          <h1 className="text-2xl font-bold">
-            Helpful <span className="text-gn">Insights</span> & <span className="text-rd">Updates</span>
+          <h1 className="text-2xl font-bold text-gray-900">
+            {blogSectionContent.headingParts.map((part, i) => (
+              <span key={i} className={part.className}>
+                {part.text}
+              </span>
+            ))}
           </h1>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight max-w-4xl">
-            Stay informed with tips, updates, and guides on UAE government processes.
+            {blogSectionContent.subheading}
           </h2>
           <div className="relative group cursor-pointer flex items-center w-fit">
-            <Link href="/" className="inline-block pb-1 text-gn transition-colors duration-300">
+            <Link href={blogSectionContent.cta.href} className="inline-block pb-1 text-gn transition-colors duration-300">
               <p className='flex items-center text-sm gap-1 pl-1'>
-                Know More <FaChevronRight />
+                {blogSectionContent.cta.text} <FaChevronRight />
               </p>
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gn transition-all duration-500 group-hover:w-full"></span>
             </Link>
@@ -62,3 +67,5 @@ const Blogs = () => {
 };
 
 export default Blogs;
+
+

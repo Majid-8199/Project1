@@ -1,5 +1,6 @@
 'use client';
 
+import { blogCardText } from "@/app/data/blogs";
 import BlogPost from "@/app/interface/blog";
 import Image from "next/image";
 import Link from "next/link";
@@ -35,7 +36,7 @@ const BlogPostCard = ({ blog }: { blog: BlogPost }) => {
         </p>
         <div className="flex justify-between items-center text-sm text-gray-500">
           <span>
-            By <span className="font-semibold text-green-600">{blog.author}</span>
+            {blogCardText.byLabel} <span className="font-semibold text-green-600">{blog.author}</span>
           </span>
           <span>{formattedDate}</span>
         </div>

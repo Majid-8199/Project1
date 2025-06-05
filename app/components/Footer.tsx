@@ -27,9 +27,9 @@ const Footer = () => {
             />
             <div className="flex flex-col gap-2">
               <h2 className="text-lg font-semibold">{company.name}</h2>
-              <div className="h-1 w-56 bg-black"></div>
-              <div className="h-1 w-56 bg-red-600"></div>
-              <p className="text-2xl">{company.tagline}</p>
+              <div className="h-1 w-40 self-start bg-black"></div>
+              <div className="h-1 w-40 self-end bg-red-600"></div>
+              <p className="text-2xl text-right">{company.tagline}</p>
             </div>
           </div>
 
@@ -90,7 +90,9 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row gap-10 text-sm">
             {/* Main Nav */}
             <div>
-              <h4 className="font-semibold mb-2 text-lg">Navigation</h4>
+              <h4 className="font-semibold mb-2 text-lg">
+                {navigation.headings.main}
+              </h4>
               <ul className="space-y-1 text-gray-300">
                 {navigation.main.map((item, index) => (
                   <li key={index}>
@@ -104,7 +106,9 @@ const Footer = () => {
 
             {/* Popular Services */}
             <div>
-              <h4 className="font-semibold mb-2 text-lg">Popular Services</h4>
+              <h4 className="font-semibold mb-2 text-lg">
+                {navigation.headings.popular}
+              </h4>
               <ul className="space-y-1 text-gray-300">
                 {navigation.popular.map((item, index) => (
                   <li key={index}>
@@ -118,7 +122,9 @@ const Footer = () => {
 
             {/* Other Services */}
             <div>
-              <h4 className="font-semibold mb-2 text-lg">Other Services</h4>
+              <h4 className="font-semibold mb-2 text-lg">
+                {navigation.headings.others}
+              </h4>
               <ul className="space-y-1 text-gray-300">
                 {navigation.others.map((item, index) => (
                   <li key={index}>
