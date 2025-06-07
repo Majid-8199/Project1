@@ -9,7 +9,6 @@ export default function LoadingWrapper({ children }: { children: React.ReactNode
   const pathname = usePathname();
 
   useLayoutEffect(() => {
-    // Trigger immediately before paint
     setLoading(true);
     const timeout = setTimeout(() => {
       setLoading(false);
@@ -18,19 +17,20 @@ export default function LoadingWrapper({ children }: { children: React.ReactNode
     return () => clearTimeout(timeout);
   }, [pathname]);
 
-  if (loading) {
-    return (
-      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-black">
-        <Image
-          src="/services/amer.webp"
-          alt="Loading..."
-          width={50}
-          height={50}
-          className="animate-spin"
-        />
-      </div>
-    );
-  }
-
-  return <>{children}</>;
+  return (
+    <div className="relative">
+      {children}
+      {loading && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-black transition-opacity duration-500 pointer-events-none">
+          <Image
+            src="/services/amer.webp"
+            alt="Loading..."
+            width={50}
+            height={50}
+            className="animate-spin"
+          />
+        </div>
+      )}
+    </div>
+  );
 }
